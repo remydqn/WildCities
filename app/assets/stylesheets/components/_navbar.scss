@@ -18,10 +18,15 @@
 }
 
 .navbar-wagon-item {
-  margin-right: 20px;
+  margin-left: 20px;
+  color: white;
 }
 
-
+.navbar-wagon-item:hover {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
 
 
 // /* User Avatar */
