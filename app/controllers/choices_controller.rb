@@ -1,8 +1,5 @@
 class ChoicesController < ApplicationController
-  def index
-  end
-
-  def show
+  def new
   end
 
   def create
