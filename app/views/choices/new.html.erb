@@ -1,2 +1,13 @@
-<h1>Choices#index</h1>
-<p>Find me in app/views/choices/index.html.erb</p>
+<h1>Choices#new</h1>
+<p>Find me in app/views/choices/new.html.erb</p>
+
+<!-- ************************************************** -->
+
+
+<%= simple_form_for @choice do |f| %>
+  <%= f.input :name, label: 'name'  %>
+  <%= f.input :date, label: 'date'  %>
+  <%= f.input :accepted, label: 'accepted'  %>
+  <%= f.input :completed, label: 'completed'  %>
+  <%= f.button :submit %>
+<% end %>

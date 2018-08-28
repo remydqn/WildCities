@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_28_122902) do
+ActiveRecord::Schema.define(version: 2018_08_28_142057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2018_08_28_122902) do
     t.integer "wild"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_criterias_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -43,7 +45,7 @@ ActiveRecord::Schema.define(version: 2018_08_28_122902) do
     t.date "end_date"
     t.string "normal_description"
     t.string "address"
-    t.string "type"
+    t.string "event_type"
     t.integer "wild"
     t.string "explained_description"
     t.string "tips"
@@ -76,5 +78,6 @@ ActiveRecord::Schema.define(version: 2018_08_28_122902) do
 
   add_foreign_key "choices", "events"
   add_foreign_key "choices", "users"
+  add_foreign_key "criterias", "users"
   add_foreign_key "users", "criterias"
 end

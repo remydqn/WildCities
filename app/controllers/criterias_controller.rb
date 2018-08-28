@@ -1,20 +1,20 @@
 class CriteriasController < ApplicationController
-  def new
-    @criteria = Criteria.new
+  def edit
+    @criteria = current_user.criteria
   end
 
-  def create
-    @criteria = Criteria.new(criteria_params)
+  def update
+    @criteria = current_user.criteria
 
-    if @criteria.save
+    if @criteria.update(criteria_params)
       redirect_to new_choice_path
     else
       render 'new'
     end
   end
 
-#   private
-#    def article_params
-#      params.require(:criteria).permit(:)
-#    end
-# end
+  private
+  def criteria_params
+    params.require(:criteria).permit(:dance, :drink, :wild, :culture)
+  end
+end
