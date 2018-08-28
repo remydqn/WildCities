@@ -1,1 +1,53 @@
-// Specific CSS for your home-page
+.page-background {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 70px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+}
+
+.page-background h1{
+  color: white;
+  font-size: 32px;
+}
+
+.btn {
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  // position: absolute;
+  // top: 500px;
+  // left: 122px;
+  // display: flex;
+  // align-items: center;
+ }
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: white;
+}
+
+.btn-4 {
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+h1 {
+  padding: 100px 40px 0px 40px;
+  margin: 0px;
+  text-align: center;
+  font-family: News Cycle, sans-serif;
+}
+
+.link {
+  padding: 90px;
+}

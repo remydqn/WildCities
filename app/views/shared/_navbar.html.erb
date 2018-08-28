@@ -1,0 +1,29 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <%= image_tag "logo.png", width: 50 %>
+  </a>
+
+  <!-- Right Navigation -->
+
+  <% if user_signed_in? %>
+
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <%= image_tag current_user.image, alt: "alttext", class:"avatar dropdown-toggle", id:"navbar-wagon-menu", data: { toggle: 'dropdown' } %>
+
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">My bookings</a></li>
+          <li><a href="#">   <%= link_to "Log out", destroy_user_session_path, method: :delete %> </a></li>
+        </ul>
+      </div>
+    </div>
+  <% else %>
+  <div class="btn-sign">
+      <%= link_to "Sign In", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Sign Up", user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  </div>
+  <% end %>
+</div>
+
