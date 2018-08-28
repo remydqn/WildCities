@@ -1,0 +1,2 @@
+class Criteria < ApplicationRecord
+end
