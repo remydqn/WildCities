@@ -2,12 +2,23 @@
 <p>Find me in app/views/choices/new.html.erb</p>
 
 <!-- ************************************************** -->
+<% @events.each do |event| %>
+  <%= event.name %><br>
+  <%= event.normal_description %><br>
+  <%= event.address %><br>
+  <%= event.event_type %><br>
+  wild: <%= event.wild %><br>
+  <%= event.explained_description %><br>
+  <%= event.tips %><br>
+  <% event.pending %><br>
+  <%= event.city %><br>
+<% end  %>
+<%= paginate @events %>
 
-
-<%= simple_form_for @choice do |f| %>
-  <%= f.input :name, label: 'name'  %>
-  <%= f.input :date, label: 'date'  %>
-  <%= f.input :accepted, label: 'accepted'  %>
-  <%= f.input :completed, label: 'completed'  %>
-  <%= f.button :submit %>
+<% simple_form_for @choice do |f| %>
+  <% f.input :name, label: 'name'  %>
+  <% f.input :date, label: 'date'  %>
+  <% f.input :accepted, label: 'accepted'  %>
+  <% f.input :completed, label: 'completed'  %>
+  <% f.button :submit %>
 <% end %>
