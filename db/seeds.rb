@@ -38,6 +38,19 @@ Event.create(
   secret_event: false
 )
 
+Event.create(
+  name: "Event Drink 3",
+  normal_description: "This is a Drink Event 3",
+  address: "Britannia, Part-Dieu",
+  event_type: "drink",
+  wild: 3,
+  explained_description: "This is a Drink Event 3 in Part-Dieu !",
+  tips: "Stage 3, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
 puts "- Events Dance..."
 
 Event.create(

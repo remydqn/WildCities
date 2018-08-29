@@ -2,15 +2,15 @@
 <p>Find me in app/views/choices/new.html.erb</p>
 
 <!-- ************************************************** -->
-<%= @event.name %><br>
-<%= @event.normal_description %><br>
-<%= @event.address %><br>
-<%= @event.event_type %><br>
-wild: <%= @event.wild %><br>
-<%= @event.explained_description %><br>
-<%= @event.tips %><br>
-<% @event.pending %><br>
-<%= @event.city %><br>
+<%= @events[current_user.choices.count - 1].name %><br>
+<%= @events[current_user.choices.count - 1].normal_description %><br>
+<%= @events[current_user.choices.count - 1].address %><br>
+<%= @events[current_user.choices.count - 1].event_type %><br>
+wild: <%= @events[current_user.choices.count - 1].wild %><br>
+<%= @events[current_user.choices.count - 1].explained_description %><br>
+<%= @events[current_user.choices.count - 1].tips %><br>
+<% @events[current_user.choices.count - 1].pending %><br>
+<%= @events[current_user.choices.count - 1].city %><br>
 
 <%= simple_form_for @choice do |f| %>
   <%= f.input :accepted, as: :radio_buttons, label: false  %>

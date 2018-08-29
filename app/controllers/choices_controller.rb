@@ -5,13 +5,16 @@ class ChoicesController < ApplicationController
   def new
     criteria = current_user.criteria
     if criteria.drink == true
-      @event = Event.where(event_type: "drink").first
+      @events = Event.where(event_type: "drink")
     elsif criteria.dance == true
-      @event = Event.where(event_type: "dance").first
+      @events = Event.where(event_type: "dance")
     elsif criteria.culture == true
-      @event = Event.where(event_type: "culture").first
+      @events = Event.where(event_type: "culture")
     end
-    @choice = Choice.create(event: @event, user: current_user)
+    @choice = Choice.create(event: @events[current_user.choices.count - 1], user: current_user)
+      # if current_user.choices.count >= 1
+      #    #il faut proposer un nvx choix a l'utilisateur
+      #    #il ne faut pas que le choix false sois remis a l'utilisateur
   end
 
   # PUT /choices/:id
