@@ -10,7 +10,7 @@ Event.destroy_all
 Criteria.destroy_all
 Choice.destroy_all
 
-puts "- Event Drink..."
+puts "- Events Drink..."
 
 Event.create(
   name: "Event Drink",
@@ -25,7 +25,20 @@ Event.create(
   secret_event: false
 )
 
-puts "- Event Dance..."
+Event.create(
+  name: "Event Drink 2",
+  normal_description: "This is a Drink Event 2",
+  address: "Britannia, Part-Dieu",
+  event_type: "drink",
+  wild: 2,
+  explained_description: "This is a Drink Event 2 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+puts "- Events Dance..."
 
 Event.create(
   name: "Event Dance",
@@ -40,7 +53,20 @@ Event.create(
   secret_event: false
 )
 
-puts "- Event Culture..."
+Event.create(
+  name: "Event Dance 2",
+  normal_description: "This is a Dance Event 2",
+  address: "Britannia, Part-Dieu",
+  event_type: "dance",
+  wild: 2,
+  explained_description: "This is a Dance Event 2 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+puts "- Events Culture..."
 
 Event.create(
   name: "Event Culture",
@@ -55,8 +81,36 @@ Event.create(
   secret_event: false
 )
 
-puts " ======================="
-puts " = Megan for ever <3 ! ="
-puts " ======================="
+Event.create(
+  name: "Event Culture 2",
+  normal_description: "This is a Culture Event 2",
+  address: "Britannia, Part-Dieu",
+  event_type: "culture",
+  wild: 2,
+  explained_description: "This is a Culture Event 2 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
 
+puts "
+_░▒███████
+░██▓▒░░▒▓██
+██▓▒░__░▒▓██___██████
+██▓▒░____░▓███▓__░▒▓██
+██▓▒░___░▓██▓_____░▒▓██
+██▓▒░________MEGAN__░▒▓██
+_██▓▒░______________░▒▓██
+__██▓▒░_FOR_EVER__░▒▓██
+___██▓▒░__________░▒▓██
+____██▓▒░___<3___░▒▓██
+_____██▓▒░_____░▒▓██
+______██▓▒░__░▒▓██
+_______█▓▒░░▒▓██
+_________░▒▓██
+_______░▒▓██
+_____░▒▓██
+
+"
 
