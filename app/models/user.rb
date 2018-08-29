@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :criteria
+  has_many :choices
 
   before_validation :create_criteria
 
