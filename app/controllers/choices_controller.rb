@@ -6,11 +6,11 @@ class ChoicesController < ApplicationController
     @choice = Choice.new
     criteria = current_user.criteria
     if criteria.drink == true
-      @events = Event.where(event_type: "drink")
+      @events = Event.where(event_type: "drink").page(params[:page]).per(1)
     elsif criteria.dance == true
-      @events = Event.where(event_type: "dance")
+      @events = Event.where(event_type: "dance").page(params[:page]).per(1)
     elsif criteria.culture == true
-      @events = Event.where(event_type: "culture")
+      @events = Event.where(event_type: "culture").page(params[:page]).per(1)
     end
   end
 

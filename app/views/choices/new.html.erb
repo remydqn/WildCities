@@ -2,37 +2,23 @@
 <p>Find me in app/views/choices/new.html.erb</p>
 
 <!-- ************************************************** -->
+<% @events.each do |event| %>
+  <%= event.name %><br>
+  <%= event.normal_description %><br>
+  <%= event.address %><br>
+  <%= event.event_type %><br>
+  wild: <%= event.wild %><br>
+  <%= event.explained_description %><br>
+  <%= event.tips %><br>
+  <% event.pending %><br>
+  <%= event.city %><br>
+<% end  %>
+<%= paginate @events %>
 
-  <%= @event.name %>
-  <%= @event.normal_description %>
-  <%= @event.address %>
-  <%= @event. %>
-  <%= @event. %>
-  <%= @event. %>
-  <%= @event. %>
-  <%= @event. %>
-  <%= @event. %>
-  <%= @event. %>
-
-
-
-<%= simple_form_for @choice do |f| %>
-  <%= f.input :name, label: 'name'  %>
-  <%= f.input :date, label: 'date'  %>
-  <%= f.input :accepted, label: 'accepted'  %>
-  <%= f.input :completed, label: 'completed'  %>
-  <%= f.button :submit %>
+<% simple_form_for @choice do |f| %>
+  <% f.input :name, label: 'name'  %>
+  <% f.input :date, label: 'date'  %>
+  <% f.input :accepted, label: 'accepted'  %>
+  <% f.input :completed, label: 'completed'  %>
+  <% f.button :submit %>
 <% end %>
-
-
-
-name: "Event Drink",
-normal_description: "This is a Drink Event",
-address: "Britannia, Part-Dieu",
-event_type: "drink",
-wild: 2,
-explained_description: "This is a Drink Event in Part-Dieu !",
-tips: "Stage 2, Bloc B",
-pending: true,
-city: "Lyon",
-secret_event: false
