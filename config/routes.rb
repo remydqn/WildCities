@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resource :criterias, only: [:edit, :update]
-  resources :events, only: :show
+  resources :events, only: [:show, :index]
   resources :choices, only: [:index, :new, :update]
   devise_for :users
   root to: 'pages#home'
