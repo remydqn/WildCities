@@ -5,13 +5,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 70px);
-  position: relative;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-
+  margin-top: -70px;
 }
 
 .page-background h1{
@@ -54,7 +53,7 @@ h1 {
 
 // typed js
 #banner-typed-text{
- text-decoration: underline #00c5ff;
+ text-decoration: underline #5972E0;
 }
 
 // BOTTOM PAGE
