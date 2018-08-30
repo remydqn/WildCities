@@ -64,6 +64,36 @@ h1 {
   background: linear-gradient(138deg, #5b05ae, #6be9ea);
 }
 
+// CARD
 
+.cards {
+  font: black;
+  background-color: transparent;
+  height: 170px;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
 
+}
+
+.cards p{
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+}
 
