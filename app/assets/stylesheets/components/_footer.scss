@@ -1,13 +1,50 @@
 .footer {
-  background-color: white;
+  background-color: black;
+  padding: 20px;
+  height: 130px;
 
 }
 
 .copyright p{
-  color: black;
+  color: white;
+  // font-weight: bold;
+  font-size: 20px;
+  font-family: 'News Cycle', sans-serif;
   margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 .footer-firstline{
-  display: flex;
+  // display: flex;
+  // justify-content: space-between;
+  color: white;
+}
+
+.footer-links a{
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.footer-firstline a{
+  color: white;
+}
+
+.footer-contact{
+  text-align: center;
+  font-size: 14px;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer-links{
+  text-align: center;
+}
+
+.footer-contact a{
+  padding-left: 10px;
+  padding-right: 10px;
 }
