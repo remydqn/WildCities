@@ -68,15 +68,22 @@ h1 {
 
 .cards {
   font: black;
-  background-color: white;
-  height: 150px;
+  background-color: transparent;
+  height: 170px;
   width: 80%;
   text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+
 }
 
 .cards p{
-  color: black;
+  color: white;
   margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .cards-container {
