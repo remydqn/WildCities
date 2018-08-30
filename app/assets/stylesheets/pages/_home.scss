@@ -1,5 +1,4 @@
 
-
 .page-background {
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), image-url('background.jpg');
   background-repeat: no-repeat;
@@ -10,7 +9,9 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin-top: -70px;
+  top: 0;
+  z-index: -1;
+  // margin-top: -70px;
 }
 
 .page-background h1{
@@ -60,6 +61,7 @@ h1 {
 
 .homepage2 {
   height: 100vh;
+  background: linear-gradient(138deg, #5b05ae, #6be9ea);
 }
 
 
