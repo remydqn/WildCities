@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :criterias, only: [:new, :create]
+  resource :criterias, only: [:edit, :update]
   resources :events, only: :show
   resources :choices, only: [:index, :new, :create]
   devise_for :users

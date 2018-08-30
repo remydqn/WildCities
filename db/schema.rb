@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_27_173500) do
+ActiveRecord::Schema.define(version: 2018_08_28_134207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_173500) do
     t.index ["user_id"], name: "index_choices_on_user_id"
   end
 
-  create_table "criteria", force: :cascade do |t|
+  create_table "criterias", force: :cascade do |t|
     t.boolean "drink"
     t.boolean "dance"
     t.boolean "culture"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_173500) do
     t.date "end_date"
     t.string "normal_description"
     t.string "address"
-    t.string "type"
+    t.string "event_type"
     t.integer "wild"
     t.string "explained_description"
     t.string "tips"
@@ -76,5 +76,5 @@ ActiveRecord::Schema.define(version: 2018_08_27_173500) do
 
   add_foreign_key "choices", "events"
   add_foreign_key "choices", "users"
-  add_foreign_key "users", "criteria", column: "criteria_id"
+  add_foreign_key "users", "criterias"
 end
