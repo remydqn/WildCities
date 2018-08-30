@@ -64,6 +64,29 @@ h1 {
   background: linear-gradient(138deg, #5b05ae, #6be9ea);
 }
 
+// CARD
 
+.cards {
+  font: black;
+  background-color: white;
+  height: 150px;
+  width: 80%;
+  text-align: center;
+}
 
+.cards p{
+  color: black;
+  margin-top: 0px;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+}
 
