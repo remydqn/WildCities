@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     #@event3 = @choices[2].event
 
     @events = Event.where.not(latitude: nil, longitude: nil)
-    #iconBase = ActionController::Base.helpers.asset_path('gmaps-image.png')
+    #iconBase = ActionController::Base.helpers.asset_path('if_location-01_186394.png')
 
     @markers = @events.map do |event|
       {
