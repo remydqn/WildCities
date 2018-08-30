@@ -4,6 +4,7 @@ class CriteriasController < ApplicationController
   end
 
   def update
+    Choice.delete_all
     @criteria = current_user.criteria
 
     if @criteria.update(criteria_params)
