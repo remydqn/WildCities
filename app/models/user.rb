@@ -10,6 +10,7 @@ class User < ApplicationRecord
   before_validation :create_criteria
 
 
+
   private
 
   def create_criteria
