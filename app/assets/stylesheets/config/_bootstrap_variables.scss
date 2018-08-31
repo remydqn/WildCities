@@ -51,3 +51,8 @@ $border-radius-small: 2px;
 }
 
 // Override other variables below!
+.form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
+    color: black;
+    background-color: yellow;
+    background-image: none;
+}

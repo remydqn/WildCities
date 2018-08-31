@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <%= javascript_include_tag 'application' %>
 
+
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 
   </head>
@@ -19,7 +20,7 @@
 
     <%= yield %>
 
-    <%= javascript_pack_tag 'application' %>
+    
     <%= render 'shared/footer'%>
 
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
