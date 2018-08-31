@@ -14,8 +14,34 @@
 
 
     <div class="link">
-      <a href=<%= "#{edit_criterias_path}" %> class="btn btn-grad">Locate me</a>
+      <a href=<%= "#{edit_criterias_path}" %> class="btn btn-grad" >Locate me</a>
       <a href="#bazinga" class="ca3-scroll-down-link ca3-scroll-down-arrow"></a>
+
+
+
+<!--
+      <button onclick="getLocation()" href=<%= "#{edit_criterias_path}" %> class="btn btn-grad">Locate me</button>
+
+      <p id="demo"></p>
+
+      <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+      }
+
+      function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+      }
+      </script>
+
+ -->
     </div>
   </div>
 </div>
