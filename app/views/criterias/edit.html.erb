@@ -5,13 +5,8 @@
       <%= simple_form_for @criteria, url: criterias_path, method: :patch, class: 'edit_criteria' do |f| %>
 
       <!-- <div class="col-xs-12"> -->
-      <%= f.input :dance, as: :radio_buttons, label: 'dance' %>
-      <!-- </div> -->
-      <!-- <div class="col-xs-12"> -->
-      <%= f.input :drink, as: :radio_buttons, label: 'drink' %>
-      <!-- </div> -->
-      <!-- <div class="col-xs-12"> -->
-      <%= f.input :culture, as: :radio_buttons, label: 'culture' %>
+
+      <%= f.input :kind, collection: Criteria::KIND, as: :radio_buttons %>
       <!-- </div> -->
     </div>
 
