@@ -14,23 +14,28 @@
 
 
     <div class="link">
-      <a href=<%= "#{edit_criterias_path}" %> class="btn btn-4">Locate me</a>
+      <a href=<%= "#{edit_criterias_path}" %> class="btn btn-grad">Locate me</a>
       <a href="#bazinga" class="ca3-scroll-down-link ca3-scroll-down-arrow"></a>
     </div>
   </div>
 </div>
 
 <div id="bazinga" class="homepage2">
+  <div class="cards-container">
+    <div class="cards" id="card1">
+      <%= image_tag "home-location.svg", height: 120 %>
+      <p>Locate yourself</p>
+    </div>
 
-  <p> HELLO </p>
-  <p> HELLO </p>
-  <p> HELLO </p>
-  <p> HELLO </p>
-  <p> HELLO </p>
-  <p> HELLO </p>
-  <p> HELLO </p>
-  <p> HELLO </p>
+    <div class="cards" id="card2">
+      <%= image_tag "home-select.svg", height: 120 %>
+      <p>Choose what you want to do</p>
+    </div>
 
-
+    <div class="cards" id="card3">
+      <%= image_tag "home-wild.svg", height: 120 %>
+      <p>Let's go, be WILD !</p>
+    </div>
+  </div>
 </div>
 

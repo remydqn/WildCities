@@ -23,7 +23,7 @@ class ChoicesController < ApplicationController
 
     @choice.update(choice_params)
     if current_user.choices.where(accepted: true).count == 3
-     redirect_to root_path
+     redirect_to events_path
     else
       redirect_to new_choice_path
     end
