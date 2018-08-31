@@ -7,14 +7,12 @@ class User < ApplicationRecord
   belongs_to :criteria
   has_many :choices, dependent: :destroy
 
-  before_validation :create_criteria
-
-
+  before_validation :create_criteria, on: :create
 
   private
 
   def create_criteria
-    criteria = Criteria.create
+    criteria = Criteria.create!
     self.criteria = criteria
   end
 end

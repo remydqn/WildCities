@@ -1,3 +1,6 @@
 class Criteria < ApplicationRecord
-  has_many :users, dependent: :destroy
+  KIND = %w(drink dance culture)
+
+  has_one :users, dependent: :destroy
+  validates :kind, inclusion: { in: KIND }, allow_nil: true
 end
