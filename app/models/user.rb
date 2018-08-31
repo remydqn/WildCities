@@ -9,11 +9,6 @@ class User < ApplicationRecord
 
   before_validation :create_criteria
 
-  # def geocoder
-  #   @results = Geocoder.search([48.856614, 2.3522219])
-  #   @results.first.address
-  # end
-
 
   private
 
