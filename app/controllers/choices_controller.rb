@@ -1,20 +1,19 @@
 class ChoicesController < ApplicationController
+
+  before_action :set_choice, only: [:accept, :decline]
+
   def index
   end
 
   def new
     criteria = current_user.criteria
-    if criteria.drink == true
-      @events = Event.where(event_type: "drink")
-    elsif criteria.dance == true
-      @events = Event.where(event_type: "dance")
-    elsif criteria.culture == true
-      @events = Event.where(event_type: "culture")
-    end
-    @choice = Choice.create(event: @events[current_user.choices.count - 1], user: current_user)
+    @events = Event.where(event_type: criteria.kind) if criteria.kind # il faudra l'affiner avec les event déjà décliner / accepter
+    @choice = Choice.create(event: @events.sample, user: current_user)
+
       # if current_user.choices.count >= 1
       #    #il faut proposer un nvx choix a l'utilisateur
       #    #il ne faut pas que le choix false sois remis a l'utilisateur
+
   end
 
   # PUT /choices/:id
@@ -34,10 +33,24 @@ class ChoicesController < ApplicationController
     # @choice.user = current_user
     # @choice.event = Choice.find(params[:choice_id])
     # @choice.save
-    # redirect_to choice_path(@choice)
+    # redirect_to choi_patce_path(@choice)
+  end
+
+  def accept
+    @choice.update(accepted: true)
+    redirect_to new_choice_path
+  end
+
+  def decline
+    @choice.update(accepted: false)
+    redirect_to new_choice_path
   end
 
   private
+
+  def set_choice
+    @choice = Choice.find(params[:id])
+  end
 
   def choice_params
     params.require(:choice).permit(:accepted)

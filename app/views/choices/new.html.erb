@@ -1,16 +1,19 @@
 <h1>Choices#new</h1>
 
-<%= @events[current_user.choices.count - 1].name %><br>
-<%= @events[current_user.choices.count - 1].normal_description %><br>
-<%= @events[current_user.choices.count - 1].address %><br>
-<%= @events[current_user.choices.count - 1].event_type %><br>
-wild: <%= @events[current_user.choices.count - 1].wild %><br>
-<%= @events[current_user.choices.count - 1].explained_description %><br>
-<%= @events[current_user.choices.count - 1].tips %><br>
-<% @events[current_user.choices.count - 1].pending %><br>
-<%= @events[current_user.choices.count - 1].city %><br>
 
-<%= simple_form_for @choice do |f| %>
-  <%= f.input :accepted, as: :radio_buttons, label: false  %>
-  <%= f.button :submit %>
-<% end %>
+<%= raw(ap @choice) %>
+<%= raw(ap @choice.event) %>
+<%= raw(ap current_user.criteria) %>
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+<!-- ************************************************** -->
+
+
+<%= link_to "accept", accept_choice_path(@choice), method: :patch, class: 'btn btn-primary'  %>
+
+<%= link_to "decline", decline_choice_path(@choice), method: :patch, class: 'btn btn-danger'  %>

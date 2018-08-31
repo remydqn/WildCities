@@ -16,6 +16,6 @@ class CriteriasController < ApplicationController
 
   private
   def criteria_params
-    params.require(:criteria).permit(:dance, :drink, :wild, :culture)
+    params.require(:criteria).permit(:wild, :kind)
   end
 end
