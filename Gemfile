@@ -18,7 +18,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
-gem 'kaminari'
+gem 'nokogiri'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
