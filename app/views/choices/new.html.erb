@@ -6,11 +6,11 @@
 <%= @events[current_user.choices.count - 1].normal_description %><br>
 <%= @events[current_user.choices.count - 1].address %><br>
 <%= @events[current_user.choices.count - 1].event_type %><br>
-wild: <%= @events[current_user.choices.count - 1].wild %><br>
 <%= @events[current_user.choices.count - 1].explained_description %><br>
 <%= @events[current_user.choices.count - 1].tips %><br>
 <% @events[current_user.choices.count - 1].pending %><br>
 <%= @events[current_user.choices.count - 1].city %><br>
+<%= @events[current_user.choices.count - 1].wild %><br>
 
 <%= simple_form_for @choice do |f| %>
   <%= f.input :accepted, as: :radio_buttons, label: false  %>
