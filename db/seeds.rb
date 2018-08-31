@@ -6,9 +6,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Choice.destroy_all
 Event.destroy_all
 Criteria.destroy_all
-Choice.destroy_all
+User.destroy_all
+
+puts 'mes users'
+remy = User.create!(
+ email: "remydqn@gmail.com",
+ password: "azerty"
+)
+
+benjamin = User.create!(
+ email: "megane@gmail.com",
+ password: "azerty"
+)
+
+megan = User.create!(
+ email: "benjolivot@gmail.com",
+ password: "azerty"
+)
+
+thomas = User.create!(
+ email: "thomas@gmail.com",
+ password: "azerty"
+)
+
+puts User.all
+
+
 
 puts "- Events Drink..."
 
