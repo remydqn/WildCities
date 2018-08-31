@@ -19,14 +19,18 @@ class ChoicesController < ApplicationController
 
   # PUT /choices/:id
   def update
-    @choice = current_user.choices.find(params[:id])
-
+    # @choice = current_user.choices.find(params[:id])
+    @choice = Choice.find(params[:id])
+    p @choices
     @choice.update(choice_params)
-    if current_user.choices.where(accepted: true).count == 3
+    if current_user.choices.where(accepted: true).count == 3 ||  current_user.choices.where(accepted: true).count
      redirect_to events_path
     else
       redirect_to new_choice_path
     end
+    # Qu'est ce que ça veut dire?
+    # Pq on redéfinit le user
+    # Pq on met une instance de choice dans une instance de choice
     # @choice.user = current_user
     # @choice.event = Choice.find(params[:choice_id])
     # @choice.save

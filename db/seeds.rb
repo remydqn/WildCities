@@ -5,12 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "destroying users"
+User.destroy_all
 
-Event.destroy_all
-Criteria.destroy_all
+puts "destroying choice"
 Choice.destroy_all
 
-puts "- Events Drink..."
+puts "destroying event"
+Event.destroy_all
+
+puts "destroying criteria"
+Criteria.destroy_all
+
+
 
 Event.create(
   name: "Event Drink",
@@ -28,7 +35,7 @@ Event.create(
 Event.create(
   name: "Event Drink 2",
   normal_description: "This is a Drink Event 2",
-  address: "Britannia, Part-Dieu",
+  address: "marseille",
   event_type: "drink",
   wild: 2,
   explained_description: "This is a Drink Event 2 in Part-Dieu !",
@@ -71,8 +78,47 @@ Event.create(
   normal_description: "This is a Dance Event 2",
   address: "Britannia, Part-Dieu",
   event_type: "dance",
-  wild: 2,
+  wild: 1,
   explained_description: "This is a Dance Event 2 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+Event.create(
+  name: "Event Dance 3",
+  normal_description: "This is a Dance Event 3",
+  address: "Britannia, Part-Dieu",
+  event_type: "dance",
+  wild: 2,
+  explained_description: "This is a Dance Event 3 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+Event.create(
+  name: "Event Dance 4",
+  normal_description: "This is a Dance Event 4",
+  address: "Britannia, Part-Dieu",
+  event_type: "dance",
+  wild: 2,
+  explained_description: "This is a Dance Event 4 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+Event.create(
+  name: "Event Dance 5",
+  normal_description: "This is a Dance Event 5",
+  address: "Britannia, Part-Dieu",
+  event_type: "dance",
+  wild: 2,
+  explained_description: "This is a Dance Event 5 in Part-Dieu !",
   tips: "Stage 2, Bloc B",
   pending: true,
   city: "Lyon",
@@ -101,6 +147,45 @@ Event.create(
   event_type: "culture",
   wild: 2,
   explained_description: "This is a Culture Event 2 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+Event.create(
+  name: "Event Culture 3",
+  normal_description: "This is a Culture Event 3",
+  address: "Britannia, Part-Dieu",
+  event_type: "culture",
+  wild: 2,
+  explained_description: "This is a Culture Event 3 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+Event.create(
+  name: "Event Culture 4",
+  normal_description: "This is a Culture Event 4",
+  address: "Britannia, Part-Dieu",
+  event_type: "culture",
+  wild: 2,
+  explained_description: "This is a Culture Event 4 in Part-Dieu !",
+  tips: "Stage 2, Bloc B",
+  pending: true,
+  city: "Lyon",
+  secret_event: false
+)
+
+Event.create(
+  name: "Event Culture 5",
+  normal_description: "This is a Culture Event 5",
+  address: "Britannia, Part-Dieu",
+  event_type: "culture",
+  wild: 2,
+  explained_description: "This is a Culture Event 5 in Part-Dieu !",
   tips: "Stage 2, Bloc B",
   pending: true,
   city: "Lyon",
