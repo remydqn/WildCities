@@ -56,6 +56,7 @@ form.edit_criteria {
     text-align: center;
     margin: 0 auto;
     margin-top: 0px;
+
 }
 
 .criterias-cb label {
@@ -77,6 +78,7 @@ background-image: linear-gradient(to top right, #f2f6f8, #eff1f3, #ebedef, #e8e8
 
 input[type=checkbox] {
   display: none;
+
 }
 
 // RANGE BUTTON
@@ -167,5 +169,6 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(18, 18, 18, 0);
 }
+
 
 
