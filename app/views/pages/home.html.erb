@@ -14,7 +14,18 @@
 
 
     <div class="link">
+
+      <% if user_signed_in? %>
+
       <a href=<%= "#{edit_criterias_path}" %> class="btn btn-grad" >Locate me</a>
+
+
+      <% else %>
+
+      <a href=<%= "#{new_user_session_path}" %> class="btn btn-grad" >Locate me</a>
+
+      <% end %>
+
       <a href="#bazinga" class="ca3-scroll-down-link ca3-scroll-down-arrow"></a>
 
     </div>
