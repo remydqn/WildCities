@@ -26,8 +26,8 @@ class EventsController < ApplicationController
 
     @markers <<
       {
-        lat: 48.856614,
-        lng: 2.3522219
+        lat: 45.746106,
+        lng: 4.83488
       }
 
   end

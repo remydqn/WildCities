@@ -6,10 +6,14 @@ class ChoicesController < ApplicationController
   end
 
   def new
-    criteria = current_user.criteria
-    @events = Event.where(event_type: criteria.kind) if criteria.kind # il faudra l'affiner avec les event déjà décliner / accepter
-    @choice = Choice.create(event: @events.sample, user: current_user)
-
+    if current_user.choices.where(accepted: true).count == 3
+     redirect_to events_path
+    else
+      criteria = current_user.criteria
+      events_ids = current_user.choices.pluck(:event_id)
+      @events = Event.where(event_type: criteria.kind).where.not(id: events_ids) if criteria.kind # il faudra l'affiner avec les event déjà décliner / accepter
+      @choice = Choice.create(event: @events.sample, user: current_user)
+    end
       # if current_user.choices.count >= 1
       #    #il faut proposer un nvx choix a l'utilisateur
       #    #il ne faut pas que le choix false sois remis a l'utilisateur
