@@ -14,13 +14,15 @@
 
   </head>
   <body>
-    <%= render 'shared/navbar'%>
+    <%= render 'shared/loader' %>
+    <%= render 'shared/navbar' %>
 
     <%= yield %>
 
 
     <%= render 'shared/footer' %>
 
-
+    <%= javascript_pack_tag "application" %>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

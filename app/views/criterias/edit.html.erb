@@ -9,19 +9,25 @@
         <%= simple_form_for @criteria, url: criterias_path, method: :patch, class: 'edit_criteria' do |f| %>
 
         <!-- <div class="col-xs-12"> -->
-
-        <%= f.input :kind, collection: Criteria::KIND, as: :radio_buttons %>
+          <%= f.input :kind, collection: Criteria::KIND, as: :radio_buttons, wrapper: :wild_boolean, label: false %>
         <!-- </div> -->
-    </div>
+    <!-- </div> -->
 
 
 
-    <p>How <strong>WILD</strong> are you ?</p>
+    <p class="wild">How <strong>WILD</strong> are you ?</p>
 
-    <input name="criteria[wild]" type="range" min="0" max="10">
+   <!--  <input name="criteria[wild]" type="range" min="0" max="10"> -->
+
+   <input name="criteria[wild]" type="range" value="6" step="1" min="1" max="10">
+    <h2 style="display: inline-block; margin-bottom: 50px;"></h2><output style="display: inline-block">6</output>
+
+
 
     <%= f.button :submit, class: 'btn btn-7'%>
     <% end %>
   </div>
+  </div>
 </div>
+
 

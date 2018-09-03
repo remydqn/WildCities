@@ -3,7 +3,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
     <style>
     </style>
-  <div id='map' style='width: 400px; height: 700px;'></div>
+  <div id='map' style='width: 100%; height: 100vh'></div>
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW53aWxkIiwiYSI6ImNqbG1iMW1hOTEycGMza3IwamF6ZXZ3aGkifQ.Ysf7DhhxllCBE3WygpnzKw';
       var map = new mapboxgl.Map({
@@ -15,6 +15,7 @@
 var marker = new mapboxgl.Marker()
   .setLngLat([4.83488, 45.746106])
   .addTo(map);
+
 
 
 
@@ -151,3 +152,4 @@ map.on('load', function () {
 
 </body>
 </html>
+
