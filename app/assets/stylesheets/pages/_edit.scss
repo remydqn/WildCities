@@ -42,6 +42,12 @@ p {
 
 .form-criteria{
   margin-top: -70px;
+  // .form-check-input {
+  // visibility: hidden;
+  // }
+  // .label{
+  //   cursor: pointer;
+  // }
 }
 
 .col-form-label {
@@ -171,4 +177,12 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
+// RADIO BUTTON DESIGN
 
+.edit_criteria input[type='radio']:checked + label {
+    color: red;
+}
+
+.edit_criteria input[type='radio'] {
+    display: none;
+}
