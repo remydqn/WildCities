@@ -1,19 +1,22 @@
-<h1>Choices#new</h1>
+  <div class="test-1"></div>
+<!-- <div class="event-container"> -->
 
+<div class="event-card">
 
-<%= raw(ap @choice) %>
-<%= raw(ap @choice.event) %>
-<%= raw(ap current_user.criteria) %>
+<% raw(ap @choice) %>
+<% raw(ap @choice.event) %>
+<% raw(ap current_user.criteria) %>
 
+<!-- <img class="img-event" src="https://via.placeholder.com/350x150"> -->
+<h3 class="title-event"><%= @choice.event.name %></h3>
+<hr class="hr-event">
 
-<hr>
-<hr>
-<hr>
-<hr>
 
 <!-- ************************************************** -->
 
-
-<%= link_to "accept", accept_choice_path(@choice), method: :patch, class: 'btn btn-primary'  %>
-
-<%= link_to "decline", decline_choice_path(@choice), method: :patch, class: 'btn btn-danger'  %>
+  <div class="btn-bar">
+    <%= link_to "<i class='fas fa-times'></i>".html_safe, decline_choice_path(@choice), method: :patch, class: 'btn btn-tinder-red'  %>
+    <%= link_to "<i class='fas fa-heart'></i>".html_safe, accept_choice_path(@choice), method: :patch, class: 'btn btn-tinder-green'  %>
+  </div>
+</div>
+<!-- </div> -->
