@@ -142,7 +142,7 @@ Event.create(
   event_type: "dance",
   wild: 6,
   explained_description: "Open your mind, move your body, drink again and again and bet your money on paintings.",
-  tips: "Look for the Red Door and knock.",
+  tips: "Look for the Red Door and knock 3 times.",
   pending: true,
   city: "Lyon",
   secret_event: false
