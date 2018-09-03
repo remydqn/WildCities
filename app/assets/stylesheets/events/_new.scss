@@ -1,0 +1,88 @@
+body {
+  min-height: 100vh;
+}
+
+.img-event {
+  width: 100%;
+}
+
+.event-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.title-event {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.hr-event {
+  width: 30px;
+  background-color: white;
+  height: 3px;
+  border: none;
+}
+
+.btn-tinder-green {
+  padding: 0;
+  width:100px;
+  height: 100px;
+  line-height: 102px;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: #37A866;
+  color: white;
+  box-shadow: none;
+  opacity: 0.9;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
+.btn-tinder-green:hover {
+  color: white;
+  background-color: #37A866;
+  opacity: 1;
+}
+
+.btn-tinder-red {
+  padding: 0;
+  width:100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: #D46D69;
+  color: white;
+  box-shadow: none;
+  opacity: 0.9;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
+.btn-tinder-red:hover {
+  color: white;
+  background-color: #D46D69;
+  opacity: 1;
+}
+
+.btn-bar {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-card {
+  padding: 15px;
+  background-color: #151515;
+  padding-bottom: 20px;
+}
+
+.test-1 {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), image-url('sortie.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: calc(100vw + 70px);
+}
