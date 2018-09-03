@@ -1,34 +1,30 @@
 class EventsController < ApplicationController
 
+
   def show
     @event = Event.find(params[:id])
   end
 
   def index
-    @choices = current_user.choices
-    # @event1 = @choices[0].event
-    # @event2 = @choices[1].event
-    # @event3 = @choices[2].event
+    @choices = current_user.choices.where(accepted: true)
+     @events = []
+     @events << @choices[0].event
+     @events << @choices[1].event
+     @events << @choices[2].event
 
 
+    # @events = @choices.where.not(latitude: nil, longitude: nil)
 
-    @events = Event.where.not(latitude: nil, longitude: nil)
-    #iconBase = ActionController::Base.helpers.asset_path('if_location-01_186394.png')
+    iconBase = ActionController::Base.helpers.asset_path('localisation.png')
 
     @markers = @events.map do |event|
       {
         lat: event.latitude,
-        lng: event.longitude
-        # icon: iconBase
+        lng: event.longitude,
+        icon: iconBase
       }
+
     end
-
-
-    @markers <<
-      {
-        lat: 45.746106,
-        lng: 4.83488
-      }
 
   end
 
