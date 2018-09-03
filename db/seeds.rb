@@ -67,7 +67,7 @@ Event.create(
 )
 
 Event.create(
-  name: "Disused shed, transe music and people from everywhere !",
+  name: "Disused shed, transe music and people from everywhere² !",
   normal_description: "",
   address: "148 avenue Berthelot, 69007 Lyon",
   event_type: "dance",
