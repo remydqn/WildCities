@@ -186,3 +186,23 @@ input[type=range]:focus::-ms-fill-upper {
 .edit_criteria input[type='radio'] {
     display: none;
 }
+
+label {
+  // font-family: 'Source Code Pro', monospace;
+  // margin-top: 60px;
+  // color: black;
+  // letter-spacing: 0.060em;
+  box-shadow: 0 0 10px #eee;
+  background-image: -webkit-linear-gradient(left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  background-image: -o-linear-gradient(left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  margin-top: 40px;
+  letter-spacing: 0.094em;
+  font-family: 'News Cycle', sans-serif;
+  width: 80%;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 20px;
+  color: black;
+}
+
