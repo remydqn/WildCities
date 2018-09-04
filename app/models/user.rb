@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   belongs_to :criteria
   has_many :choices, dependent: :destroy
-
+  has_many :votes
   before_validation :create_criteria, on: :create
 
   private
