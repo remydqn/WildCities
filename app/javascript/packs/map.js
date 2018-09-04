@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW53aWxkIiwiYSI6ImNqbG1iMW1hOTEycGMza3IwamF6ZXZ3aGkifQ.Ysf7DhhxllCBE3WygpnzKw';
+mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW53aWxkIiwiYSI6ImNqbG5raHB4YTBsamozbHMzNDBxeWJ3YXMifQ.WVAvyhtKa3gWkQPo5gH31w';
 
 
 const mapElement = document.getElementById('map');
@@ -6,7 +6,6 @@ const mapElement = document.getElementById('map');
 
 if (mapElement) {
   const markers = JSON.parse(mapElement.dataset.markers);
-
   var map = new mapboxgl.Map({
     container: 'map',
     center: [4.83488, 45.746106],
@@ -78,6 +77,8 @@ if (mapElement) {
         }
     });
 
+    getRoute();
+
 
     map.addControl(new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -116,6 +117,35 @@ if (mapElement) {
     });
 
 
+  });
+
+
+};
+
+
+function getRoute() {
+  const markers = JSON.parse(mapElement.dataset.markers);
+  var start = [4.83488, 45.746106];
+  var end = [markers[0].longitude, markers[0].latitude];
+  var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+  $.ajax({
+    url: directionsRequest,
+  }).done(function(data) {
+    var route = data.routes[0].geometry;
+    map.addLayer({
+      id: 'route',
+      type: 'line',
+      source: {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          geometry: route
+        }
+      },
+      paint: {
+        'line-width': 3
+      }
+    });
   });
 }
 
