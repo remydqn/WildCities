@@ -10,6 +10,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loaderRemove() {
-  document.querySelector("#loader").remove()
+  document.querySelector("#loader").remove();
 }
-
