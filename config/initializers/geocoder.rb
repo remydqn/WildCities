@@ -1,6 +1,6 @@
 Geocoder.configure(
 
-  api_key:   ENV['GOOGLE_API_SERVER_KEY'],
+  api_key:   ENV['MAPBOX_KEY_API'],
   use_https: true,
   # [...]
   # Geocoding options
