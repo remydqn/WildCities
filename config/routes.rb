@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+
   resource :criterias, only: [:edit, :update]
-  resources :events, only: [:show, :index]
+  resources :events, only: [:show, :index] do
+    get 'votes/new'
+  end
   resources :choices, only: [:index, :new, :update, :show] do
     member do
       patch :accept

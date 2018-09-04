@@ -9,7 +9,6 @@ import "./map";
 //   setTimeout(loaderRemove, 2000);
 // });
 
-// function loaderRemove() {
-//   document.querySelector("#loader").remove()
-// }
-
+function loaderRemove() {
+  document.querySelector("#loader").remove();
+}
