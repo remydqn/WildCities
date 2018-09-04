@@ -2,6 +2,7 @@ import "bootstrap";
 import "./smooth-scroll";
 import "./typed";
 import "./slider";
+import "./map";
 
 
 document.addEventListener("DOMContentLoaded", function() {
