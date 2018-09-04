@@ -22,8 +22,6 @@ var marker = new mapboxgl.Marker()
     </script> -->
 
 
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 
 
 <style>
@@ -146,7 +144,13 @@ map.on('load', function () {
     map.on('mouseleave', 'places', function () {
         map.getCanvas().style.cursor = '';
     });
+
+    // Add geolocate control to the map.
+
+
 });
+
+
 </script>
 
 

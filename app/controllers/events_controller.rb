@@ -15,14 +15,8 @@ class EventsController < ApplicationController
 
     # @events = @choices.where.not(latitude: nil, longitude: nil)
 
-    iconBase = ActionController::Base.helpers.asset_path('localisation.png')
 
-    @markers = @events.map do |event|
-      {
-        lat: event.latitude,
-        lng: event.longitude,
-        icon: iconBase
-      }
+
 
     end
 
