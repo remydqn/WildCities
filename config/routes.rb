@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resource :criterias, only: [:edit, :update]
+  resources :criterias, only: [:edit, :update]
   resources :events, only: [:show, :index]
   resources :choices, only: [:index, :new, :update, :show] do
     member do
