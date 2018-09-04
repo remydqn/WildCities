@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def show
-    events = []
+    @events = []
     @events << Event.find(params[:id])
     tourweb = Event.create(
       name: "Tour du Web",
