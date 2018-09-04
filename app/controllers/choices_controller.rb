@@ -17,7 +17,6 @@ class ChoicesController < ApplicationController
       # if current_user.choices.count >= 1
       #    #il faut proposer un nvx choix a l'utilisateur
       #    #il ne faut pas que le choix false sois remis a l'utilisateur
-
   end
 
   # PUT /choices/:id

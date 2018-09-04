@@ -1,0 +1,78 @@
+// @import "lesshat";
+
+// #16a085: #16a085;
+// #1abc9c: #1abc9c;
+
+.star-rating {
+  font-family: 'FontAwesome';
+  margin: 50px auto;
+
+  > fieldset {
+    border: none;
+    display: inline-block;
+
+    &:not(:checked) {
+      > input {
+        position: absolute;
+        top: -9999px;
+        clip: rect(0,0,0,0);
+      }
+
+      > label {
+        float: right;
+        width: 1.2em;
+        padding: 0 .05em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 200%;
+        color: #16a085;
+
+        &:before {
+          // content: '\f003  ';
+          // font-family: 'Font Awesome\ 5 Free';
+        }
+
+        &:hover,
+        &:hover ~ label {
+          color: #1abc9c;
+          text-shadow: 0 0 3px #1abc9c;
+          &:before {
+            content: '\f005  ';
+            font-family: 'Font Awesome\ 5 Free';
+          }
+        }
+      }
+    }
+
+    > input:checked {
+      & ~ label {
+        &:before {
+          content: '\f005  ';
+          font-family: 'Font Awesome\ 5 Free';
+        }
+      }
+    }
+
+    > label:active {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+body {
+  background: #262829;
+  color: #95a5a6;
+
+
+  p {
+    font-size: 1.6em;
+    margin: auto;
+    width: 80%;
+  }
+
+  a {
+    color: #16a085;
+  }
+}
