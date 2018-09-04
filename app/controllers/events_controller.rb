@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
 
-
   def show
     @event = Event.find(params[:id])
   end
@@ -9,6 +8,5 @@ class EventsController < ApplicationController
     @choices = current_user.choices.where(accepted: true)
     @events = @choices.map { |choice| choice.event }
   end
-
 
 end
