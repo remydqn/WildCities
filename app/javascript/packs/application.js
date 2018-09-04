@@ -5,11 +5,11 @@ import "./slider";
 import "./map";
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(loaderRemove, 2000);
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   setTimeout(loaderRemove, 2000);
+// });
 
-function loaderRemove() {
-  document.querySelector("#loader").remove()
-}
+// function loaderRemove() {
+//   document.querySelector("#loader").remove()
+// }
 
