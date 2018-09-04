@@ -26,7 +26,7 @@ if (mapElement) {
                     "type": "Feature",
                     "properties": {
                         "description": markers[0].normal_description,
-                        "icon": "bar"
+                        "icon": markers[0].icon
                     },
                     "geometry": {
                         "type": "Point",
@@ -37,7 +37,7 @@ if (mapElement) {
                     "type": "Feature",
                     "properties": {
                         "description": markers[1].normal_description,
-                        "icon": "bar"
+                        "icon": markers[1].icon
                     },
                     "geometry": {
                         "type": "Point",
@@ -48,7 +48,7 @@ if (mapElement) {
                     "type": "Feature",
                     "properties": {
                         "description": markers[2].normal_description,
-                        "icon": "music"
+                        "icon": markers[2].icon
 
                     },
                     "geometry": {
