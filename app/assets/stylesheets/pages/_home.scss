@@ -28,24 +28,6 @@ h1 {
 
 // BUTTON
 
-.btn-custom-home {
-  padding: 10px;
-  text-align: center;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  transition: 0.5s;
- }
-
- .btn-grad {
-  background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
-}
-.btn-grad:hover {
-  background-position: right center;
-  color: white;
-}
 
 
 .link {
