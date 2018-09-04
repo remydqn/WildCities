@@ -49,9 +49,9 @@ Event.create(
   tips: "Backroom, Password : ZALTAN2018",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
-
 
 Event.create(
   name: "Secret Poker night on a rooftop !",
@@ -63,7 +63,8 @@ Event.create(
   tips: "On the roof, take the fire escape at the back of the building !",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "bar"
 )
 
 Event.create(
@@ -76,7 +77,8 @@ Event.create(
   tips: "Be ready to run if cops show up !",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
 
 Event.create(
@@ -89,7 +91,8 @@ Event.create(
   tips: "Come on in by the back entrance.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "bar"
 )
 
 Event.create(
@@ -102,7 +105,8 @@ Event.create(
   tips: "You have to know the boss' name : Richard",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
 
 Event.create(
@@ -115,7 +119,8 @@ Event.create(
   tips: "Don't forget your pass! And always say Hello to Chrstina, the boss.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "bar"
 )
 
 
@@ -129,7 +134,8 @@ Event.create(
   tips: "Do not come unfortified.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "bar"
 )
 
 
@@ -145,7 +151,8 @@ Event.create(
   tips: "Look for the Red Door and knock 3 times.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
 
 
@@ -160,7 +167,8 @@ Event.create(
   tips: "Cross the little park to find the barge, by the river.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
 
 
@@ -175,7 +183,8 @@ Event.create(
   tips: "Prepare yourself to take off one of your clothes at the entrance.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
 
 
@@ -190,7 +199,8 @@ Event.create(
   tips: "Press the red button behing the 5th whashing machine.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "music"
 )
 
 
@@ -205,7 +215,8 @@ Event.create(
   tips: "45 rue Parmentier, 69200 Vénissieux",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "bar"
 )
 
 
@@ -219,7 +230,8 @@ Event.create(
   tips: "You have to know how to say 'Your bar is the most special bar in this city' in spanish.",
   pending: true,
   city: "Lyon",
-  secret_event: false
+  secret_event: false,
+  icon: "bar"
 )
 
 #------------
