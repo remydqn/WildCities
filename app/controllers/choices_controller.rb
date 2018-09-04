@@ -5,6 +5,13 @@ class ChoicesController < ApplicationController
   def index
   end
 
+
+def show
+
+end
+
+
+
   def new
     if current_user.choices.where(accepted: true).count == 3
      redirect_to events_path
