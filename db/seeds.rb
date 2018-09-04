@@ -208,11 +208,11 @@ Event.create(
 Event.create(
   name: "Le Syndicat",
   normal_description: "A high-end cocktail establishment in a poor neighborhood. Come and enjoy atypical and varied cocktails in a bar with an underground spirit specialized in French alcohol.",
-  address: "",
+  address: "22 rue Cuvier, 69006 Lyon",
   event_type: "drink",
   wild: 6,
   explained_description: "The most doubtful bar in Lyon! Don't be afraid to come inside.. even if the outside is weird.",
-  tips: "45 rue Parmentier, 69200 Vénissieux",
+  tips: "Take your CGT card",
   pending: true,
   city: "Lyon",
   secret_event: false,

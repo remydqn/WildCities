@@ -3,10 +3,9 @@
 
 
 <!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">New experience</button>
 
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm" role="document">
+<div  tabindex="1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div  role="document">
     <div class="modal-content">
 
 
@@ -18,7 +17,7 @@
           <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Poor"><i class="far fa-star"></i></label>
           <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Very Poor"><i class="far fa-star"></i></label>
         </fieldset>
-
+      </div>
 
       <%=  link_to "Vote", edit_criterias_path   %>
 
