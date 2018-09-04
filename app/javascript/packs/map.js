@@ -11,7 +11,7 @@ if (mapElement) {
     container: 'map',
     center: [4.83488, 45.746106],
     style: 'mapbox://styles/mapbox/light-v9',
-    zoom: 11.15
+    zoom: 10.50
   });
   map.on('load', function () {
     map.addLayer({
@@ -25,7 +25,7 @@ if (mapElement) {
                   {
                     "type": "Feature",
                     "properties": {
-                        "description": markers[0].normal_description,
+                        "description": markers[0].normal_description + "<a href='/maps/" + markers[0].id + "' class='btn btn-custom-map'>choisir cette activité</a>",
                         "icon": markers[0].icon
                     },
                     "geometry": {
@@ -36,7 +36,7 @@ if (mapElement) {
                   {
                     "type": "Feature",
                     "properties": {
-                        "description": markers[1].normal_description,
+                        "description": markers[1].normal_description + "<a href='/maps/" + markers[0].id + "' class='btn btn-custom-map'>choisir cette activité</a>",
                         "icon": markers[1].icon
                     },
                     "geometry": {
@@ -47,7 +47,7 @@ if (mapElement) {
                   {
                     "type": "Feature",
                     "properties": {
-                        "description": markers[2].normal_description,
+                        "description": markers[2].normal_description + "<a href='/maps/" + markers[0].id + "' class='btn btn-custom-map'>choisir cette activité</a>",
                         "icon": markers[2].icon
 
                     },
