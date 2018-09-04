@@ -26,9 +26,12 @@ var marker = new mapboxgl.Marker()
 
 <style>
     .mapboxgl-popup {
-        max-width: 200px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        max-width: 150px;
+        max-height: 80px;
+        font: 12px/15px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         z-index: 11;
+        color: black;
+        text-align: center;
     }
 
     .mapboxgl-canvas, #map {
@@ -60,8 +63,8 @@ map.on('load', function () {
                 "features": [{
                     "type": "Feature",
                     "properties": {
-                        "description": "<strong>Secret Poker night on a rooftop!</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
-                        "icon": "theatre"
+                        "description": "<strong>Secret Poker night on a rooftop!</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\"></a> hhhhh</p>",
+                        "icon": "bar"
                     },
                     "geometry": {
                         "type": "Point",
