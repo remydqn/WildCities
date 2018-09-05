@@ -3,4 +3,7 @@ class VotesController < ApplicationController
     @vote = Vote.new
   end
 
+ def create
+ end
+
 end

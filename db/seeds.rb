@@ -7,13 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroying choice"
 Choice.destroy_all
+puts "destroying votes"
+Vote.destroy_all
 puts "destroying event"
 Event.destroy_all
 puts "destroying criteria"
 Criteria.destroy_all
 puts "destroying users"
 User.destroy_all
-
 
 puts 'mes users'
 remy = User.create!(
@@ -37,6 +38,8 @@ thomas = User.create!(
 )
 
 puts User.all
+
+
 
 
 dance_hot_stuff = Event.create(
@@ -71,9 +74,9 @@ secret_poker = Event.create(
   secret_event: false,
   icon: "bar",
 )
-
 secret_poker.remote_picture_url = "https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 secret_poker.save
+
 
 abandoned_hangar = Event.create(
   name: "Abandoned hangar, transmusic and people from everywhere ! Discover the most secret (and illegal) spot to listen music all night. ",
@@ -88,6 +91,7 @@ abandoned_hangar = Event.create(
   secret_event: false,
   icon: "music",
 )
+
 
 abandoned_hangar.remote_picture_url = "https://images.pexels.com/photos/164319/pexels-photo-164319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 abandoned_hangar.save
@@ -105,9 +109,9 @@ favela_chic = Event.create(
   secret_event: false,
   icon: "bar",
 )
-
 favela_chic.remote_picture_url = "https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 favela_chic.save
+
 
 garage_dance = Event.create(
   name: "Lets dance in a garage !",
@@ -122,6 +126,7 @@ garage_dance = Event.create(
   secret_event: false,
   icon: "music",
 )
+
 
 garage_dance.remote_picture_url = "https://images.pexels.com/photos/745054/pexels-photo-745054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 garage_dance.save
@@ -179,6 +184,7 @@ taverne_ours = Event.create(
 
 taverne_ours.remote_picture_url = "https://images.pexels.com/photos/709604/pexels-photo-709604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 taverne_ours.save
+
 
 the_egrab = Event.create(
   name: "The EGRAB",
@@ -252,6 +258,7 @@ le_syndicat.remote_picture_url = "https://images.pexels.com/photos/4295/black-an
 le_syndicat.save
 
 
+
 behind_the_hotel = Event.create(
   name: "Behind the Hotel, come, dance and speak spanish! ",
   normal_description: "Underground bar where we rediscover the Argentine culture. La Mezcaleria is a very secret place, hidden behind the kitchens of the hotel.",
@@ -266,8 +273,19 @@ behind_the_hotel = Event.create(
   icon: "bar",
 )
 
+
 behind_the_hotel.remote_picture_url = "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 behind_the_hotel.save
+
+30.times do
+  Vote.create(
+    note:  rand(1..5) ,
+    user_id: [benjamin.id, megan.id, remy.id, thomas.id].sample ,
+    event_id: [dance_hot_stuff.id, secret_poker.id, abandoned_hangar.id, favela_chic.id, garage_dance.id, la_daronne.id, under_the_bridge.id, taverne_ours.id, the_egrab.id, blending.id, lavomatic.id, le_syndicat.id, behind_the_hotel.id].sample ,
+  )
+end
+
+
 
 #------------
 

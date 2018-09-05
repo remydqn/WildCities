@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resource :criterias, only: [:edit, :update]
   resources :events, only: [:show, :index] do
-    get 'votes/new'
+    resources :votes, only: [:new, :create]
   end
   resources :choices, only: [:index, :new, :update, :show] do
     member do

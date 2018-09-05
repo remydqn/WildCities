@@ -1,5 +1,4 @@
 // @import "lesshat";
-
 // #16a085: #16a085;
 // #1abc9c: #1abc9c;
 .tns-outer {
@@ -117,4 +116,12 @@ body {
   a {
     color: #16a085;
   }
+}
+
+.no-bg {
+  background-color: #555;
+}
+
+.star-rating label {
+  box-shadow: none;
 }
