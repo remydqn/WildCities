@@ -87,6 +87,7 @@ GEM
       factory_bot (~> 4.11.0)
       railties (>= 3.0.0)
     ffi (1.9.25)
+    flutie (2.0.0)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
     geocoder (1.5.0)
@@ -259,6 +260,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_bot_rails
+  flutie
   font-awesome-sass (~> 5.0.9)
   geocoder
   jbuilder (~> 2.0)

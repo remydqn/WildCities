@@ -5,5 +5,6 @@ class Event < ApplicationRecord
   has_many :users
   has_many :choices
   mount_uploader :picture, PhotoUploader
+  has_many :votes
 
 end

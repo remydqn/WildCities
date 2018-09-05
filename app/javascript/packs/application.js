@@ -3,6 +3,7 @@ import "./smooth-scroll";
 import "./typed";
 import "./slider";
 import "./map";
+import "./carousel";
 
 
 // document.addEventListener("DOMContentLoaded", function() {

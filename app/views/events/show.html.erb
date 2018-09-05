@@ -1,21 +1,38 @@
 
-<style>
-    .mapboxgl-popup {
-        max-width: 150px;
-        max-height: 80px;
-        font: 12px/15px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        z-index: 11;
-        color: black;
-        text-align: center;
-    }
+<div class="carousel">
+  <img class="img-height-carousel" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5b811266a4cf56733a98b08047ffe3ed&auto=format&fit=crop&w=1050&q=80" alt="party">
+  <img class="img-height-carousel" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be465b88fdf21a6e05ab522458452344&auto=format&fit=crop&w=967&q=80" alt="party">
+  <img class="img-height-carousel" src="https://images.unsplash.com/photo-1504704911898-68304a7d2807?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=45fb8bcd6fa0560f44a84f9668a511bb&auto=format&fit=crop&w=1050&q=80" alt="party">
+</div>
+<!--
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
 
-    .mapboxgl-canvas, #map {
-      z-index: 10;
-    }
+<!-- ============== END CAROUSEL ============== -->
+<div class="container">
 
-</style>
-
-<div id='map-show' style='width: 100%; height: 700px;' data-markers="<%= @events.to_json %>"></div>
-
-
+  <div class="row help-align-center row-show-name">
+    <div class="col-xs-8 help-align-center">
+      <h2><%= @event.name %><h2>
+    </div>
+    <div class="col-xs-4 help-align-center">
+      <a href="#" class="btn-wildcity">GO</a>
+    </div>
+  </div>
+  <div class="row row-show-desc">
+    <p class="show-xpn-desc">
+      <%= @event.explained_description %>
+    </p>
+    <p class="show-nrm-desc">
+      <%= @event.normal_description %>
+    </p>
+  </div>
+</div>
 
