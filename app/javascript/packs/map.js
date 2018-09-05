@@ -77,7 +77,7 @@ if (mapElement) {
         }
     });
 
-    getRoute();
+    // getRoute();
 
 
     map.addControl(new mapboxgl.GeolocateControl({
