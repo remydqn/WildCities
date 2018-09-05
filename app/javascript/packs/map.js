@@ -1,8 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW53aWxkIiwiYSI6ImNqbG5raHB4YTBsamozbHMzNDBxeWJ3YXMifQ.WVAvyhtKa3gWkQPo5gH31w';
 
-
 const mapElement = document.getElementById('map');
-
 
 if (mapElement) {
   const markers = JSON.parse(mapElement.dataset.markers);
@@ -10,116 +8,86 @@ if (mapElement) {
     container: 'map',
     center: [4.83488, 45.746106],
     style: 'mapbox://styles/mapbox/light-v9',
-    zoom: 10.50
+    zoom: 9
   });
+
   map.on('load', function () {
-    map.addLayer({
-        "id": "places",
-        "type": "symbol",
-        "source": {
-            "type": "geojson",
-            "data": {
-                "type": "FeatureCollection",
-                "features": [
-                  {
-                    "type": "Feature",
-                    "properties": {
-                        "description": markers[0].normal_description + "<a href='/events/" + markers[0].id + "' class='btn-wildcity'>SHOW</a>",
-                        "icon": markers[0].icon
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [markers[0].longitude, markers[0].latitude]
-                    }
-                  },
-                  {
-                    "type": "Feature",
-                    "properties": {
-                        "description": markers[1].normal_description + "<a href='/events/" + markers[0].id + "' class='btn-wildcity'>SHOW</a>",
-                        "icon": markers[1].icon
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates":[markers[1].longitude, markers[1].latitude]
-                    }
-                  },
-                  {
-                    "type": "Feature",
-                    "properties": {
-                        "description": markers[2].normal_description + "<a href='/events/" + markers[0].id + "' class='btn-wildcity'>SHOW</a>",
-                        "icon": markers[2].icon
-
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [markers[2].longitude, markers[2].latitude]
-                    }
-                  },
-                  {
-                    "type": "Feature",
-                    "properties": {
-                        "description": "Geoloc",
-                        "icon": "marker"
-
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [4.83488, 45.746106]
-                    }
-                  },
-
-                ]
-            }
+    const features = markers.map((marker) => {
+      return {
+        "type": "Feature",
+        "properties": {
+          "icon": marker.icon
         },
-        "layout": {
-            "icon-image": "{icon}-15",
-            "icon-allow-overlap": true
+        "geometry": {
+          "type": "Point",
+          "coordinates": [marker.longitude, marker.latitude]
         }
+      }
     });
 
-    // getRoute();
+    map.addLayer({
+      "id": "places",
+      "type": "symbol",
+      "source": {
+        "type": "geojson",
+        "data": {
+          "type": "FeatureCollection",
+          "features": features
+        }
+      },
+      "layout": {
+        "icon-image": "{icon}-15",
+        "icon-allow-overlap": true
+      }
+    });
 
+
+    const bounds = new mapboxgl.LngLatBounds();
+
+    markers.forEach(function(marker) {
+      bounds.extend([marker.longitude, marker.latitude]);
+    });
+
+    map.fitBounds(bounds, {
+      padding: { top: 30, bottom: 30, left: 30, right: 30 }
+    });
 
     map.addControl(new mapboxgl.GeolocateControl({
-        positionOptions: {
-            enableHighAccuracy: true
-        },
-        trackUserLocation: true
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
     }));
 
-    // When a click event occurs on a feature in the places layer, open a popup at the
-    // location of the feature, with description HTML from its properties.
-    map.on('click', 'places', function (e) {
-        var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = e.features[0].properties.description;
-
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    navigator.geolocation.getCurrentPosition((position) => {
+      map.addLayer({
+        "id": "currentPosition",
+        "type": "symbol",
+        "source": {
+          "type": "geojson",
+          "data": {
+            "type": "FeatureCollection",
+            "features": [{
+              "type": "Feature",
+              "properties": {
+                "icon": "marker"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [position.coords.longitude, position.coords.latitude]
+              }
+            }]
+          }
+        },
+        "layout": {
+          "icon-image": "{icon}-15",
+          "icon-allow-overlap": true
         }
+      });
+    }, (error) => {
 
-        new mapboxgl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(description)
-            .addTo(map);
-    });
-
-    // Change the cursor to a pointer when the mouse is over the places layer.
-    map.on('mouseenter', 'places', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'places', function () {
-        map.getCanvas().style.cursor = '';
-    });
-
-
+    }, { timeout: 5000 });
   });
-
-
 };
 
 
@@ -148,4 +116,3 @@ function getRoute() {
     });
   });
 }
-
