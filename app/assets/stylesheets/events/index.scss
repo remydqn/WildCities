@@ -2,16 +2,35 @@
   z-index: -1;
   margin-top: 70px;
 }
-.lister {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px white solid;
+
+
+
+.img-event {
+  height: 120px !important;
+  object-fit: cover;
 }
-.lister h2 {
+
+.event-contain {
+  padding-left: 0 !important;
+}
+
+.name-event {
   font-size: 20px;
-  color: white;
 }
-.lister li {
-  color: white;
-  list-style-type: none;
+
+.row-event {
+  border-top: 1px solid #101010;
+  position: relative;
+}
+
+.event-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.row-event:hover {
+  opacity: 0.7;
 }
