@@ -24,7 +24,7 @@ if (mapElement) {
                   {
                     "type": "Feature",
                     "properties": {
-                        "description": markers[0].normal_description + "<a href='/events/" + markers[0].id + "' class='btn btn-custom-map'>choisir cette activité</a>",
+                        "description": markers[0].normal_description + "<a href='/maps/" + markers[0].id + "' class='btn-wildcity'>go</a>",
                         "icon": markers[0].icon
                     },
                     "geometry": {
@@ -35,7 +35,7 @@ if (mapElement) {
                   {
                     "type": "Feature",
                     "properties": {
-                        "description": markers[1].normal_description + "<a href='/events/" + markers[0].id + "' class='btn btn-custom-map'>choisir cette activité</a>",
+                        "description": markers[1].normal_description + "<a href='/maps/" + markers[0].id + "' class='btn-wildcity'>go</a>",
                         "icon": markers[1].icon
                     },
                     "geometry": {
@@ -46,7 +46,7 @@ if (mapElement) {
                   {
                     "type": "Feature",
                     "properties": {
-                        "description": markers[2].normal_description + "<a href='/events/" + markers[0].id + "' class='btn btn-custom-map'>choisir cette activité</a>",
+                        "description": markers[2].normal_description + "<a href='/maps/" + markers[0].id + "' class='btn-wildcity'>go</a>",
                         "icon": markers[2].icon
 
                     },
