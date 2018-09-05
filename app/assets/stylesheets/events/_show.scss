@@ -2,6 +2,48 @@
 
 // #16a085: #16a085;
 // #1abc9c: #1abc9c;
+.tns-outer {
+  margin-top: 70px;
+}
+
+.tns-nav {
+  display: none;
+}
+
+.help-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.row-show-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row-show-desc {
+  margin-bottom: 20px;
+}
+
+.img-height-carousel {
+  object-fit: cover;
+  height: 60vh !important;
+  // min-height: 60vh;
+  // width: auto;
+}
+
+.show-xpn-desc {
+  margin: 0 auto;
+  max-width: 96%;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: red;
+  opacity: 0.8;
+}
+
+.show-nrm-desc {
+  font-size: 22px;
+}
 
 .star-rating {
   font-family: 'FontAwesome';
