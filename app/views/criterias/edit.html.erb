@@ -16,6 +16,11 @@
         <p class="wild">How <strong>WILD</strong> are you ?</p>
         <%= f.input :wild, collection: collection_for_wildness, as: :radio_buttons, wrapper: :inline_radioboxes, label: false %>
 
+        <div class="text-wild1 hidden"> lorem ipsum 1</div>
+        <div class="text-wild2 hidden"> lorem ipsum 2</div>
+        <div class="text-wild3 hidden"> lorem ipsum 3</div>
+        <div class="text-wild4 hidden"> lorem ipsum 4</div>
+
         <%= f.button :submit, class: 'btn btn-7'%>
       <% end %>
     </div>

@@ -119,7 +119,6 @@ label {
   letter-spacing: 0.094em;
   font-family: 'News Cycle', sans-serif;
   width: 100%;
-  height: 60px;
   line-height: 60px;
   border-radius: 5px;
   color: black;
@@ -146,9 +145,8 @@ element.style {
 
 .criteria_wild {
   display: flex;
-  // border: 0px;
-  // box-shadow: none;
   justify-content: space-between;
+  text: red;
 }
 
 .criteria_wild label{
@@ -158,3 +156,19 @@ element.style {
 .criteria_wild input[type='radio'] + label {
   border: none;
 }
+
+.criteria_wild input[type='radio']:checked + label {
+  background-color: transparent;
+  color: red;
+ }
+
+
+input:checked + label img {
+    transform: scale(1.3);
+    transition: transform ease 0.3s;
+}
+
+// .criteria_wild input[type='radio']:checked + p {
+//   color: red;
+//   }
+// visibility: hidden;
