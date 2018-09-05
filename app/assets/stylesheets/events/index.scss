@@ -1,18 +1,34 @@
 #map {
   z-index: -1;
+  margin-top: 70px;
 }
 
-.lister {
-  text-align: center;
-  border-style: solid;
-  display: flex;
+.img-event {
+  height: 120px !important;
+  object-fit: cover;
 }
 
-.lister h2 {
-  color: white;
+.event-contain {
+  padding-left: 0 !important;
 }
 
-.lister li {
-  color: white;
-  list-style-type: none;
+.name-event {
+  font-size: 20px;
+}
+
+.row-event {
+  border-top: 1px solid #101010;
+  position: relative;
+}
+
+.event-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.row-event:hover {
+  opacity: 0.7;
 }

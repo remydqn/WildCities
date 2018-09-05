@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_09_05_082319) do
   end
 
   create_table "criterias", force: :cascade do |t|
+    t.boolean "culture"
     t.integer "wild"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
