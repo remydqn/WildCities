@@ -1,0 +1,17 @@
+.criterias-edit {
+  .criteria_wild label p {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    padding-top: 30px;
+    left: 0px;
+  }
+
+  .criteria_wild input:checked + label p {
+    display: block;
+  }
+
+  .criteria_wild label {
+    margin-bottom: 80px;
+  }
+}

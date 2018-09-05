@@ -86,6 +86,15 @@ SimpleForm.setup do |config|
     end
   end
 
+  config.wrappers :inline_radioboxes, tag: 'div', class: 'wild-radioboxes', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.optional :readonly
+    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :label, class: 'form-check-label'
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  end
+
   # vertical input for radio buttons and check boxes
   config.wrappers :vertical_collection, item_wrapper_class: 'form-check', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
