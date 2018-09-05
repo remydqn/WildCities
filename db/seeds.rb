@@ -7,13 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroying choice"
 Choice.destroy_all
+puts "destroying votes"
+Vote.destroy_all
 puts "destroying event"
 Event.destroy_all
 puts "destroying criteria"
 Criteria.destroy_all
 puts "destroying users"
 User.destroy_all
-
 
 puts 'mes users'
 remy = User.create!(
@@ -39,7 +40,7 @@ thomas = User.create!(
 puts User.all
 
 
-Event.create(
+hot_stuff = Event.create(
   name: "Hot Stuff, Terminus Club",
   normal_description: "Antinote's boss Zaltan and Sentiments—one of the most interesting French producers right now—join forces to finish the week with good vibes, in a backroom of an Italian restaurant! ",
   address: "3 rue Terme, 69001 Lyon",
@@ -53,7 +54,7 @@ Event.create(
   icon: "music"
 )
 
-Event.create(
+secret_poker = Event.create(
   name: "Secret Poker night on a rooftop !",
   normal_description: "Come and play poker with people during a night on a rooftop renting by bar servers ! Openbar and music all night.",
   address: "27 rue du Commandant Lamperière, 69007 Lyon",
@@ -67,7 +68,7 @@ Event.create(
   icon: "bar"
 )
 
-Event.create(
+disused_shed = Event.create(
   name: "Disused shed, transe music and people from everywhere² !",
   normal_description: "",
   address: "148 avenue Berthelot, 69007 Lyon",
@@ -81,7 +82,7 @@ Event.create(
   icon: "music"
 )
 
-Event.create(
+favela_chic = Event.create(
   name: "La Favela Chic",
   normal_description: "Reach a secret room via the back of the theater, on the other side of the red curtain.",
   address: "57 avenue Léon Blum, 69100 Villeurbanne",
@@ -95,7 +96,7 @@ Event.create(
   icon: "bar"
 )
 
-Event.create(
+lets_dance = Event.create(
   name: "Lets dance in a garage !",
   normal_description: "This is not only a garage.. after 20h, when the doors are closed, the night begin! Music, cocktails.. in the secret place in the huge room at the bottom of the garage.",
   address: "12-14 rue Louis blanc, 69006 Lyon",
@@ -109,7 +110,7 @@ Event.create(
   icon: "music"
 )
 
-Event.create(
+la_daronne = Event.create(
   name: "La Daronne",
   normal_description: "This place is unique! You have to get your pass, it's 2 euros. After that, you will drink and dance all night In an associative bar where each people can expose his artistic talent, whatever it is!",
   address: "23 quai Jean-Moulin, 69001 Lyon",
@@ -124,7 +125,7 @@ Event.create(
 )
 
 
-Event.create(
+under_bridge = Event.create(
   name: "Under the Bridge",
   normal_description: "Improvised and short-lived evening under the bridge in front of the Cité Internationale. Campfire, music, urbex, beers and freedom all night long.",
   address: "Promenade du bas Rhône, 69006 Lyon",
@@ -141,7 +142,7 @@ Event.create(
 
 puts "- Events Dance..."
 
-Event.create(
+taverne_ours = Event.create(
   name: "La Taverne de l'Ours qui boit",
   normal_description: "The perfect place to combine The discovery of still unknown artists and a huge dancefloor with Indie/Pop music.",
   address: "15 rue Magenta, 69006 Lyon",
@@ -157,7 +158,7 @@ Event.create(
 
 
 
-Event.create(
+egrab = Event.create(
   name: "The EGRAB",
   normal_description: "You've heard about the barges in Lyon ? We will take you on an outstanding barge, a different barge. ",
   address: "Place de Montréal, 69002 Lyon",
@@ -173,7 +174,7 @@ Event.create(
 
 
 
-Event.create(
+melange = Event.create(
   name: "Melange",
   normal_description: "This is the place where people come from everywhere, every social class. ",
   address: "1 rue Auguste Payant, 69008 Lyon",
@@ -189,7 +190,7 @@ Event.create(
 
 
 
-Event.create(
+lavomatic = Event.create(
   name: "LAVOMATIC",
   normal_description: "A funtionnal lavomatic hiding a secret bar.",
   address: "56 rue Domer, 69007 Lyon",
@@ -205,7 +206,7 @@ Event.create(
 
 
 
-Event.create(
+syndicat = Event.create(
   name: "Le Syndicat",
   normal_description: "A high-end cocktail establishment in a poor neighborhood. Come and enjoy atypical and varied cocktails in a bar with an underground spirit specialized in French alcohol.",
   address: "22 rue Cuvier, 69006 Lyon",
@@ -220,7 +221,7 @@ Event.create(
 )
 
 
-Event.create(
+hotel = Event.create(
   name: "Behind the Hotel, come, dance and speak spanish! ",
   normal_description: "Underground bar where we rediscover the Argentine culture. La Mezcaleria is a very secret place, hidden behind the kitchens of the hotel.",
   address: "4 rue André Bollier, 69008 Lyon",
@@ -233,6 +234,16 @@ Event.create(
   secret_event: false,
   icon: "bar"
 )
+
+30.times do
+  Vote.create(
+    note:  rand(1..5) ,
+    user_id: [benjamin.id, megan.id, remy.id, thomas.id].sample ,
+    event_id: [hot_stuff.id, secret_poker.id, disused_shed.id, favela_chic.id, lets_dance.id, la_daronne.id, under_bridge.id, taverne_ours.id, egrab.id, melange.id, lavomatic.id, syndicat.id, hotel.id].sample ,
+  )
+end
+
+
 
 #------------
 
