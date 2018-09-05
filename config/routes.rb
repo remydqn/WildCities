@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  get '/go', to: 'pages#go'
   resource :criterias, only: [:edit, :update]
   resources :events, only: [:show, :index] do
     get 'votes/new'
