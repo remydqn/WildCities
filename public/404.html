@@ -55,14 +55,14 @@
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }*/
 
-  .link {
+/*  .link {
     color: black;
     padding-top: 30px;
     background: white;
     border-radius: 20px;
     width: 80%;
 
-  }
+  }*/
 
   .page-404{
     display: flex;
@@ -70,6 +70,86 @@
     justify-content: space-around;
     height: 100vh;
   }
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.btn-wildcity, .btn-wildcity:focus {
+  position: relative;
+  border: none;
+  width: 100%;
+  background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 6px #555555;
+  transition: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+}
+.btn-wildcity:hover {
+  color: white;
+  box-shadow: 0 4px #555555;
+  top: 2px;
+  text-decoration: none;
+}
+.btn-wildcity:active {
+  color: white;
+  box-shadow: 0 0px #555555;
+  top: 6px;
+}
+
+.btn-wildcity-secondary, .btn-wildcity-secondary:hover, .btn-wildcity-secondary:focus, .btn-wildcity-secondary:active  {
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  color: black;
+/*border: 2px solid #000;*/
+}
+
+.btn-wildcity-secondary, .btn-wildcity-secondary:focus {
+  box-shadow: 0 6px #555;
+}
+
+.btn-wildcity-secondary:hover {
+  box-shadow: 0 4px #555;
+}
+
+.btn-wildcity-secondary:active {
+  box-shadow: 0 0px #555;
+}
+
+.btn-wildcity-home, .btn-wildcity-home:hover, .btn-wildcity-home:focus, .btn-wildcity-home:active  {
+  background-color: #002878;
+  background-image: linear-gradient(45deg, #4776E6 0%, #8E54E9 55%, #4776E6 90%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 48px;
+  text-decoration: none;
+  box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+  transition: all 0.5s ease;
+  width: 50%;
+}
+
+.btn-wildcity-home:hover {
+  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+}
+
+.tenor-gif-embed{
+  height: 50vh;
+  background: none;
+  margin: 0;
+}
+
+
+
   </style>
 </head>
 
@@ -88,7 +168,7 @@
       <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     </div>
     <div class="link">
-      <a href="http://www.wildcities.co/">Go Back</a>
+      <a href="http://www.wildcities.co/" class="btn-wildcity btn-wildcity-home">Go Back</a>
     </div>
   </div>
 </body>
