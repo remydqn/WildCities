@@ -15,8 +15,12 @@
 
     <!-- ************************************************** -->
     <div class="btn-bar">
-      <%= link_to "<i class='fas fa-times'></i>".html_safe, decline_choice_path(@choice), class: 'btn btn-tinder-red'  %>
-      <%= link_to "<i class='fas fa-heart'></i>".html_safe, accept_choice_path(@choice), class: 'btn btn-tinder-green'  %>
+      <span data-href="<%= decline_choice_path(@choice) %>" class='btn btn-tinder-red'>
+        <i class='fas fa-times'></i>
+      </span>
+      <span data-href="<%= accept_choice_path(@choice) %>" class='btn btn-tinder-green'>
+        <i class='fas fa-heart'></i>
+      </span>
     </div>
   </div>
 </div>
