@@ -1,17 +1,35 @@
+.pages-home {
+  margin-top: 0;
+
+  .back-link {
+    display: none;
+  }
+
+  .navbar-wagon {
+    background-color: transparent;
+  }
+
+  h1 {
+    padding-top: 30vh;
+    margin: 0;
+    height: 65vh;
+    font-family: News Cycle, sans-serif;
+  }
+
+  .link {
+    padding-top: 10vh;
+    height: 40vh;
+  }
+}
+
 .page-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
     image-url("background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   text-align: center;
-  top: 0;
   z-index: -1;
-  // margin-top: -70px;
 }
 
 .page-background h1 {
@@ -19,18 +37,7 @@
   font-size: 32px;
 }
 
-h1 {
-  padding: 100px 40px 0px 40px;
-  margin: 0px;
-  text-align: center;
-  font-family: News Cycle, sans-serif;
-}
-
 // BUTTON
-
-.link {
-  padding: 90px 0 0;
-}
 
 // typed js
 #banner-typed-text {

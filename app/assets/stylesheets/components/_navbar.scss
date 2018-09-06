@@ -12,13 +12,16 @@
   top: 0px;
   width: 100%;
   z-index: 12;
+
+  .back-link i {
+    font-size: 20px;
+    color: white;
+  }
 }
 
 // /* Logo */
 .navbar-wagon-brand img {
-  height: 60px;
-  width: 110px;
-  border-radius: 50px;
+  width: 70px;
 }
 
 .navbar-wagon-item {
