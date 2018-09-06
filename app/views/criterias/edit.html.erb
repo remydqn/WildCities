@@ -13,7 +13,7 @@
           <%= f.input :wild, collection: collection_for_wildness, as: :radio_buttons, wrapper: :inline_radioboxes, label: false, required: true %>
         </div>
 
-        <%= f.button :submit, value: 'GO WILD !', class: 'btn-wildcity btn-wildcity-secondary'%>
+        <%= f.button :submit, value: 'GO WILD !', class: 'btn-wildcity btn-wildcity-secondary', data: { disable_with: 'GO WILD !' } %>
       <% end %>
     </div>
   </div>
