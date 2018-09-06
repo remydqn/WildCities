@@ -4,21 +4,33 @@
     width: 90vw;
     text-align: center;
     margin: 0 auto;
+    padding-top: 70px;
   }
 
   .img-desfamilles {
-    margin-right: 20px;
-    width: 50px;
+    margin-right: 13px;
+    margin-left: 13px;
+    width: 60px;
   }
 
   input[type="radio"] {
       display: none;
   }
 
-  .wildness-rating fieldset input:checked {
-    .wildness-rating fieldset input:checked label img {
-    display: block;
-    transform: scale(2);
-    }
+  .wildness-rating {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wildness-rating input:checked + label {
+      transform: scale(1.3);
+      transition: transform ease 0.3s;
+  }
+
+  .star-rating {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
