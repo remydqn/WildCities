@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/go', to: 'pages#go'
   resource :criterias, only: [:edit, :update]
   resources :events, only: [:show, :index] do
-   resources :votes, only: [:new, :create]
+    resources :votes, only: [:new, :create]
   end
   resources :choices, only: [:index, :new, :update, :show] do
     member do
