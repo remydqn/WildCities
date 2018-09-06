@@ -1,6 +1,5 @@
 <div class="main-vote">
 
-      <p>Vote :</p>
       <form method="post" action=<%= "#{event_votes_path}" %>>
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
@@ -19,7 +18,6 @@
           </fieldset>
         </div>
 
-      <p>Wildness :</p>
         <div class="wildness-rating">
           <fieldset>
             <input type="radio" id="wild1" name="vote[wildness]" value="1" />
