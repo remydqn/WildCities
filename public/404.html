@@ -3,13 +3,15 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    background: linear-gradient(138deg, #5b05ae, #6be9ea);
+    color: white;
     text-align: center;
-    font-family: arial, sans-serif;
+    font-family: 'News Cycle', sans-serif;
     margin: 0;
+    height: 100vh;
   }
 
   .rails-default-error-page div.dialog {
@@ -18,7 +20,9 @@
     margin: 4em auto 0;
   }
 
-  .rails-default-error-page div.dialog > div {
+
+
+ /* .rails-default-error-page div.dialog > div {
     border: 1px solid #CCC;
     border-right-color: #999;
     border-left-color: #999;
@@ -29,9 +33,9 @@
     background-color: white;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  }*/
 
-  .rails-default-error-page h1 {
+/*  .rails-default-error-page h1 {
     font-size: 100%;
     color: #730E15;
     line-height: 1.5em;
@@ -50,18 +54,23 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  }*/
   </style>
 </head>
 
 <body class="rails-default-error-page">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO">
+
+
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+      <h1>Something went wrong</h1>
+      <div class="tenor-gif-embed" data-postid="8313798" data-share-method="host" data-width="100%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/titanic-gif-8313798">Titanic Leonardo Di Caprio GIF</a> from <a href="https://tenor.com/search/titanic-gifs">Titanic GIFs</a></div>
+      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      <button type="button" class="btn btn-light">Go Back</button>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>
