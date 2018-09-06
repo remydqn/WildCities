@@ -54,7 +54,7 @@ dance_hot_stuff = Event.create(
   secret_event: false,
   icon: "music",
   photos: ["https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/878979/pexels-photo-878979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"]
+  "https://images.pexels.com/photos/878979/pexels-photo-878979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   ]
 )
 
@@ -72,7 +72,7 @@ secret_poker = Event.create(
   secret_event: false,
   icon: "bar",
   photos: ["https://images.pexels.com/photos/237857/pexels-photo-237857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/1353005/pexels-photo-1353005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"]
+  "https://images.pexels.com/photos/1353005/pexels-photo-1353005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   ]
 )
 
