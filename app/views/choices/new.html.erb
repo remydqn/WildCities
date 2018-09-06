@@ -1,22 +1,22 @@
-  <div class="test-1"></div>
-<!-- <div class="event-container"> -->
+<div class="event-proposition">
+  <div class="event-banner"></div>
+  <div class="event-card">
 
-<div class="event-card">
+    <% raw(ap @choice) %>
+    <% raw(ap @choice.event) %>
+    <% raw(ap current_user.criteria) %>
 
-<% raw(ap @choice) %>
-<% raw(ap @choice.event) %>
-<% raw(ap current_user.criteria) %>
-
-<!-- <img class="img-event" src="https://via.placeholder.com/350x150"> -->
-<h3 class="title-event"><%= @choice.event.name %></h3>
-<hr class="hr-event">
+    <!-- <img class="img-event" src="https://via.placeholder.com/350x150"> -->
+    <div class="description">
+      <h3 class="title-event"><%= @choice.event.name %></h3>
+      <p class="title-tips"><%= @choice.event.tips %></p>
+    </div>
 
 
-<!-- ************************************************** -->
-
-  <div class="btn-bar">
-    <%= link_to "<i class='fas fa-times'></i>".html_safe, decline_choice_path(@choice), method: :patch, class: 'btn btn-tinder-red'  %>
-    <%= link_to "<i class='fas fa-heart'></i>".html_safe, accept_choice_path(@choice), method: :patch, class: 'btn btn-tinder-green'  %>
+    <!-- ************************************************** -->
+    <div class="btn-bar">
+      <%= link_to "<i class='fas fa-times'></i>".html_safe, decline_choice_path(@choice), class: 'btn btn-tinder-red'  %>
+      <%= link_to "<i class='fas fa-heart'></i>".html_safe, accept_choice_path(@choice), class: 'btn btn-tinder-green'  %>
+    </div>
   </div>
 </div>
-<!-- </div> -->

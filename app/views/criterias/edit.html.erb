@@ -1,28 +1,20 @@
-
-
-
 <div class="container container-edit">
   <div class="row justify-center">
     <div class="form-criteria">
-      <p class="p-edit">What do you want to do in LYON ?</p>
-
       <%= simple_form_for @criteria, url: criterias_path, method: :patch, class: 'edit_criteria' do |f| %>
 
-      <!-- <div class="col-xs-12"> -->
+        <div class="form-elements">
+          <p class="p-edit">What's your current mood?</p>
+          <%= f.input :kind, collection: Criteria::KIND, as: :radio_buttons, wrapper: :wild_boolean, label: false, required: true %>
+        </div>
 
-        <%= f.input :kind, collection: Criteria::KIND, as: :radio_buttons, wrapper: :wild_boolean, label: false %>
-      <!-- </div> -->
-  <!-- </div> -->
-        <p class="wild p-edit">How <strong>WILD</strong> are you ?</p>
-        <%= f.input :wild, collection: collection_for_wildness, as: :radio_buttons, wrapper: :inline_radioboxes, label: false %>
+        <div class="form-elements">
+          <p class="wild p-edit">How <strong>WILD</strong> are you ?</p>
+          <%= f.input :wild, collection: collection_for_wildness, as: :radio_buttons, wrapper: :inline_radioboxes, label: false, required: true %>
+        </div>
 
         <%= f.button :submit, value: 'GO WILD !', class: 'btn-wildcity btn-wildcity-secondary'%>
       <% end %>
     </div>
-
-
   </div>
 </div>
-
-
-

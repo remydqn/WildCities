@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   end
   resources :choices, only: [:index, :new, :update, :show] do
     member do
-      patch :accept
-      patch :decline
+      get :accept
+      get :decline
     end
   end
   devise_for :users

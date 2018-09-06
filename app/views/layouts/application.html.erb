@@ -31,8 +31,6 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
-
-
     <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
 
     <%= csrf_meta_tags %>
@@ -47,7 +45,6 @@
     <%= render 'shared/navbar' %>
 
     <%= yield %>
-
 
     <%= render 'shared/footer' %>
 
