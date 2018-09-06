@@ -76,7 +76,7 @@
 .btn-wildcity, .btn-wildcity:focus {
   position: relative;
   border: none;
-  width: 100%;
+  width: 80%;
   background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
   height: 60px;
   display: flex;
@@ -92,6 +92,7 @@
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
+  text-decoration: none;
 }
 .btn-wildcity:hover {
   color: white;
@@ -148,12 +149,15 @@
   margin: 0;
 }
 
+iframe html {
+  background-color: none !important;
+}
 
 
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="rails-default-error-page" style="background-color: none;">
 
 
   <!-- This file lives in public/404.html -->
@@ -164,11 +168,10 @@
       </div>
     </div>
     <div class="dialog">
-      <div class="tenor-gif-embed" data-postid="8313798" data-share-method="host" data-width="100%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/titanic-gif-8313798">Titanic Leonardo Di Caprio GIF</a> from <a href="https://tenor.com/search/titanic-gifs">Titanic GIFs</a></div>
-      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      <img src="https://media1.tenor.com/images/8be9b6099e8ef1cfd96587a43321aee8/tenor.gif?itemid&#x3D;8313798" alt="">
     </div>
     <div class="link">
-      <a href="http://www.wildcities.co/" class="btn-wildcity btn-wildcity-home">Go Back</a>
+      <a href="http://www.wildcities.co/" class="btn-wildcity btn-wildcity-secondary">Go Back</a>
     </div>
   </div>
 </body>
