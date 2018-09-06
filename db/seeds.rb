@@ -53,11 +53,10 @@ dance_hot_stuff = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: ["https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/878979/pexels-photo-878979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"]
+  ]
 )
-
-dance_hot_stuff.remote_picture_url = "https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-dance_hot_stuff.save
-
 
 
 secret_poker = Event.create(
@@ -72,27 +71,29 @@ secret_poker = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "bar",
+  photos: ["https://images.pexels.com/photos/237857/pexels-photo-237857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/1353005/pexels-photo-1353005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"]
+  ]
 )
 
-secret_poker.remote_picture_url = "https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-secret_poker.save
 
 abandoned_hangar = Event.create(
-  name: "Abandoned hangar, transmusic and people from everywhere ! Discover the most secret (and illegal) spot to listen music all night. ",
-  normal_description: "",
+  name: "Abandoned Hangar",
+  normal_description: "Abandoned hangar, transmusic and people from everywhere ! Discover the most secret (and illegal) spot to listen music all night.",
   address: "148 avenue Berthelot, 69007 Lyon",
   event_type: "dance",
   wild: 4,
   explained_description: "You can pay the entrance price with what you want !",
-  tips: "Be ready to run if cops show up !",
+  tips: "Be ready to run fast if cops show up !",
   pending: true,
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: ["https://images.pexels.com/photos/164319/pexels-photo-164319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/788824/pexels-photo-788824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
 
-abandoned_hangar.remote_picture_url = "https://images.pexels.com/photos/164319/pexels-photo-164319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-abandoned_hangar.save
 
 favela_chic = Event.create(
   name: "La Favela Chic",
@@ -106,10 +107,11 @@ favela_chic = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "bar",
+  photos: [ "https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/1185440/pexels-photo-1185440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
 
-favela_chic.remote_picture_url = "https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-favela_chic.save
 
 garage_dance = Event.create(
   name: "Lets dance in a garage !",
@@ -118,15 +120,15 @@ garage_dance = Event.create(
   event_type: "dance",
   wild: 4,
   explained_description: "If you go outside of the garage, you can't go back inside!",
-  tips: "You have to know the boss' name : Richard",
+  tips: "You have to know the boss' nickname : Richy",
   pending: true,
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: [ "https://images.pexels.com/photos/745054/pexels-photo-745054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/219101/pexels-photo-219101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
-
-garage_dance.remote_picture_url = "https://images.pexels.com/photos/745054/pexels-photo-745054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-garage_dance.save
 
 
 la_daronne = Event.create(
@@ -141,10 +143,12 @@ la_daronne = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "bar",
+  photos: ["https://images.pexels.com/photos/1185434/pexels-photo-1185434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/69894/pexels-photo-69894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+
+  ]
 )
 
-la_daronne.remote_picture_url = "https://images.pexels.com/photos/1185434/pexels-photo-1185434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-la_daronne.save
 
 under_the_bridge = Event.create(
   name: "Under the Bridge",
@@ -158,12 +162,11 @@ under_the_bridge = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "bar",
+  photos: [ "https://images.pexels.com/photos/954616/pexels-photo-954616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/48801/steelwool-firespin-art-people-48801.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+
+  ]
 )
-
-under_the_bridge.remote_picture_url = "https://images.pexels.com/photos/954616/pexels-photo-954616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-under_the_bridge.save
-
-
 
 taverne_ours = Event.create(
   name: "La Taverne de l'Ours qui boit",
@@ -177,10 +180,10 @@ taverne_ours = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: ["https://images.pexels.com/photos/709604/pexels-photo-709604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/4776/man-sunglasses-art-graffiti.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
-
-taverne_ours.remote_picture_url = "https://images.pexels.com/photos/709604/pexels-photo-709604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-taverne_ours.save
 
 the_egrab = Event.create(
   name: "The EGRAB",
@@ -194,14 +197,14 @@ the_egrab = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: [ "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/1267350/pexels-photo-1267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
-
-the_egrab.remote_picture_url = "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-the_egrab.save
 
 
 blending = Event.create(
-  name: "Blending",
+  name: "Blending ",
   normal_description: "This is the place where people come from everywhere, every social class, disguised or not. ",
   address: "1 rue Auguste Payant, 69008 Lyon",
   event_type: "dance",
@@ -212,10 +215,10 @@ blending = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: [ "https://images.pexels.com/photos/1230397/pexels-photo-1230397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/543/black-and-white-man-person-cigarette.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
-
-blending.remote_picture_url = "https://images.pexels.com/photos/1230397/pexels-photo-1230397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-blending.save
 
 
 lavomatic = Event.create(
@@ -230,10 +233,10 @@ lavomatic = Event.create(
   city: "Lyon",
   secret_event: false,
   icon: "music",
+  photos: [ "https://images.pexels.com/photos/4414/black-and-white-clean-housework-launderette.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/806631/pexels-photo-806631.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
-
-lavomatic.remote_picture_url = "https://images.pexels.com/photos/4414/black-and-white-clean-housework-launderette.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-lavomatic.save
 
 
 le_syndicat = Event.create(
@@ -243,33 +246,34 @@ le_syndicat = Event.create(
   event_type: "hangout",
   wild: 4,
   explained_description: "Don't be afraid to come inside.. even if the outside is weird.",
-  tips: "Take your CGT card",
+  tips: "Take your CGT card. LOL ...",
   pending: true,
   city: "Lyon",
   secret_event: false,
   icon: "bar",
+  photos: [
+    "https://images.pexels.com/photos/4295/black-and-white-alcohol-bar-drinks.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/301692/pexels-photo-301692.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
 
-le_syndicat.remote_picture_url = "https://images.pexels.com/photos/4295/black-and-white-alcohol-bar-drinks.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-le_syndicat.save
-
-
 behind_the_hotel = Event.create(
-  name: "Behind the Hotel, come, dance and speak spanish! ",
-  normal_description: "Underground bar where we rediscover the Argentine culture. La Mezcaleria is a very secret place, hidden behind the kitchens of the hotel.",
+  name: "Behind the Hotel, dance and speak spanish! ",
+  normal_description: "Underground bar where you will rediscover the Argentine culture. La Mezcaleria is a very secret place, hidden behind the kitchens of the hotel.",
   address: "4 rue André Bollier, 69008 Lyon",
   event_type: "hangout",
   wild: 4,
   explained_description: "Groups of maximum 3 people can come.",
-  tips: "You have to know how to say 'Your bar is the coolest bar in this city' in spanish.",
+  tips: "You have to know how to say 'Your bar is the coolest bar of this city' in spanish.",
   pending: true,
   city: "Lyon",
   secret_event: false,
   icon: "bar",
+  photos: [ "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/434298/pexels-photo-434298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ]
 )
 
-behind_the_hotel.remote_picture_url = "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-behind_the_hotel.save
 
 #------------
 
