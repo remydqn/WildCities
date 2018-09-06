@@ -6,7 +6,7 @@
   <div class="row row-event event-contain">
 
     <div class="col-xs-6 event-contain">
-      <img class="img-event" src=<%= "#{cl_image_path(event.picture)}" %> alt="party">
+      <img class="img-event" src=<%= "#{cl_image_path(event.photos.first)}" %> alt="party">
     </div>
     <div class="col-xs-6 help-align-center">
       <h3 class="name-event"><%= event.name %></h3>

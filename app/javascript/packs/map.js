@@ -7,7 +7,7 @@ if (mapElement) {
   var map = new mapboxgl.Map({
     container: 'map',
     center: [4.83488, 45.746106],
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 9
   });
 
@@ -70,7 +70,9 @@ if (mapElement) {
             "features": [{
               "type": "Feature",
               "properties": {
+                "iconSize": [90, 90],
                 "icon": "marker"
+
               },
               "geometry": {
                 "type": "Point",
