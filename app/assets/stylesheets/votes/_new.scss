@@ -1,0 +1,24 @@
+.votes-new {
+  .main-vote {
+    height: calc(100vh - 200px);
+    width: 90vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .img-desfamilles {
+    margin-right: 20px;
+    width: 50px;
+  }
+
+  input[type="radio"] {
+      display: none;
+  }
+
+  .wildness-rating fieldset input:checked {
+    .wildness-rating fieldset input:checked label img {
+    display: block;
+    transform: scale(2);
+    }
+  }
+}
