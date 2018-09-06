@@ -6,11 +6,11 @@
     height: calc(100vh - 70px);
   }
 
-  .event-banner {
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-    background-size: cover;
-    background-position: center;
-    height: 30vh;
+  .choice-count {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
   }
 
   .btn-bar {
@@ -65,7 +65,6 @@
   font-size: 40px;
   border-radius: 50%;
   background-color: #37a866;
-
   color: white;
   box-shadow: none;
   opacity: 0.9;

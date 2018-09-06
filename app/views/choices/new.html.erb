@@ -2,7 +2,7 @@
   <div style="background-image: url(<%= "#{@choice.event.photos.first}" %>) !important;
     background-size: cover;
     background-position: center;
-    height: 30vh;" class="event-banner"></div>
+    height: 60vh;" class="event-banner"></div>
   <div class="event-card">
 
     <% raw(ap @choice) %>
@@ -11,9 +11,9 @@
 
     <!-- <img class="img-event" src="https://via.placeholder.com/350x150"> -->
     <div class="description">
+      <center><p class="choice-count">Your choices : <%= current_user.choices.where(accepted: true).count %> / 3</p>
       <h3 class="title-event"><%= @choice.event.name %></h3>
-      <center><p class="choice-count"><%= current_user.choices.where(accepted: true).count %> / 3 choix</p></center>
-      <p class="title-tips"><%= @choice.event.tips %></p>
+      <p class="title-tips"><%= @choice.event.tips %></p></center>
     </div>
 
 
