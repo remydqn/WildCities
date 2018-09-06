@@ -1,20 +1,15 @@
 class ChoicesController < ApplicationController
-
   before_action :set_choice, only: [:accept, :decline]
 
   def index
   end
 
-
-def show
-
-end
-
-
+  def show
+  end
 
   def new
     if current_user.choices.where(accepted: true).count == 3
-     redirect_to events_path
+      redirect_to events_path
     else
       criteria = current_user.criteria
       events_ids = current_user.choices.pluck(:event_id)

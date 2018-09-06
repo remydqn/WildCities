@@ -1,23 +1,43 @@
-<h1>Votes#new</h1>
-<p>Find me in app/views/votes/new.html.erb</p>
-
 <div  tabindex="1" role="dialog" aria-labelledby="mySmallModalLabel">
- <div  role="document">
-   <div class="modal-content">
+  <div  role="document">
+    <div class="modal-content">
 
+      <form method="post" action=<%= "#{event_votes_path}" %>>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
-     <div class="star-rating">
-       <fieldset>
-         <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Outstanding"><i class="far fa-star"></i></label>
-         <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Very Good"><i class="far fa-star"></i></label>
-         <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Good"><i class="far fa-star"></i></label>
-         <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Poor"><i class="far fa-star"></i></label>
-         <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Very Poor"><i class="far fa-star"></i></label>
-       </fieldset>
-     </div>
+        <div class="star-rating">
+          <fieldset>
+            <input type="radio" id="star5" name="vote[note]" value="5" />
+            <label for="star5" title="Outstanding"><i class="far fa-star"></i></label>
+            <input type="radio" id="star4" name="vote[note]" value="4" />
+            <label for="star4" title="Very Good"><i class="far fa-star"></i></label>
+            <input type="radio" id="star3" name="vote[note]" value="3" />
+            <label for="star3" title="Good"><i class="far fa-star"></i></label>
+            <input type="radio" id="star2" name="vote[note]" value="2" />
+            <label for="star2" title="Poor"><i class="far fa-star"></i></label>
+            <input type="radio" id="star1" name="vote[note]" value="1" />
+            <label for="star1" title="Very Poor"><i class="far fa-star"></i></label>
+          </fieldset>
+        </div>
 
-     <%=  link_to "Vote", edit_criterias_path(current_user.criteria)   %>
+        <div class="star-rating">
+          <fieldset>
+            <input type="radio" id="wild5" name="vote[wildness]" value="5" />
+            <label for="wild5" title="Outstanding"><i class="far fa-star"></i></label>
+            <input type="radio" id="wild4" name="vote[wildness]" value="4" />
+            <label for="wild4" title="Very Good"><i class="far fa-star"></i></label>
+            <input type="radio" id="wild3" name="vote[wildness]" value="3" />
+            <label for="wild3" title="Good"><i class="far fa-star"></i></label>
+            <input type="radio" id="wild2" name="vote[wildness]" value="2" />
+            <label for="wild2" title="Poor"><i class="far fa-star"></i></label>
+            <input type="radio" id="wild1" name="vote[wildness]" value="1" />
+            <label for="wild1" title="Very Poor"><i class="far fa-star"></i></label>
+          </fieldset>
+        </div>
 
-   </div>
- </div>
+        <input type="submit" value="vote" class="btn-wildcity">
+      </form>
+
+    </div>
+  </div>
 </div>

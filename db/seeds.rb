@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts  "destroying vote"
+Vote.destroy_all
 puts "destroying choice"
 Choice.destroy_all
 puts "destroying event"
@@ -61,7 +63,7 @@ secret_poker = Event.create(
   name: "Secret Poker night on a rooftop !",
   normal_description: "Come and play poker with people during a night on a rooftop renting by players ! Open-bar and music all night.",
   address: "27 rue du Commandant Lamperière, 69007 Lyon",
-  event_type: "drink",
+  event_type: "hangout",
   wild: 4,
   explained_description: "Starting bet : 20 euros !",
   tips: "Take the fire escape at the back of the building !",
@@ -97,7 +99,7 @@ favela_chic = Event.create(
   name: "La Favela Chic",
   normal_description: "Reach a secret room via the back of the theater, on the other side of the stage curtain.",
   address: "57 avenue Léon Blum, 69100 Villeurbanne",
-  event_type: "drink",
+  event_type: "hangout",
   wild: 4,
   explained_description: "This place combined a dancefloor with pleasant and Brazilian musics and a bar with a beautiful New York decoration !",
   tips: "Come on in by the back entrance.",
@@ -133,7 +135,7 @@ la_daronne = Event.create(
   name: "La Daronne",
   normal_description: "This place is unique! You have to get your pass, it's 2 euros. After that, you will drink and dance all night In an associative bar where each one can expose its artistic talent, whatever it is!",
   address: "23 quai Jean-Moulin, 69001 Lyon",
-  event_type: "drink",
+  event_type: "hangout",
   wild: 4,
   explained_description: "Be ready to show your artistic talent too!",
   tips: "Don't forget your pass! And always say Hello to Christina, the boss.",
@@ -152,7 +154,7 @@ under_the_bridge = Event.create(
   name: "Under the Bridge",
   normal_description: "Improvised and short-lived evening under the bridge in front of the Cité Internationale. Campfire, music, urbex, beers and freedom all night long.",
   address: "Promenade du bas Rhône, 69006 Lyon",
-  event_type: "drink",
+  event_type: "hangout",
   wild: 4,
   explained_description: "Cool and wild event, into the nature, near the river.. !",
   tips: "Do not come unfortified.",
@@ -241,7 +243,7 @@ le_syndicat = Event.create(
   name: "Le Syndicat",
   normal_description: "A high-end cocktail establishment in a poor neighborhood and The most suspicious bar in Lyon! Come and enjoy atypical and varied cocktails in a bar with an underground spirit specialized in French alcohol.",
   address: "22 rue Cuvier, 69006 Lyon",
-  event_type: "drink",
+  event_type: "hangout",
   wild: 4,
   explained_description: "Don't be afraid to come inside.. even if the outside is weird.",
   tips: "Take your CGT card. LOL ...",
@@ -259,7 +261,7 @@ behind_the_hotel = Event.create(
   name: "Behind the Hotel, dance and speak spanish! ",
   normal_description: "Underground bar where you will rediscover the Argentine culture. La Mezcaleria is a very secret place, hidden behind the kitchens of the hotel.",
   address: "4 rue André Bollier, 69008 Lyon",
-  event_type: "drink",
+  event_type: "hangout",
   wild: 4,
   explained_description: "Groups of maximum 3 people can come.",
   tips: "You have to know how to say 'Your bar is the coolest bar of this city' in spanish.",

@@ -1,5 +1,3 @@
-
-
 <div class="home">
   <div class="page-background">
     <h1>
@@ -8,26 +6,9 @@
       <br> way of exploring a city</br>
     </h1>
 
-    <!-- <p>
-      <span id="banner-typed-text"></span>
-    </p> -->
-
-
     <div class="link">
-
-      <% if user_signed_in? %>
-
-      <a href=<%= "#{edit_criterias_path}" %> class="btn-wildcity btn-wildcity-home" >Start</a>
-
-
-      <% else %>
-
-      <a href=<%= "#{new_user_session_path}" %> class="btn-wildcity btn-wildcity-home" >start</a>
-
-      <% end %>
-
+      <a href="<%= edit_criterias_path %>" class="btn-wildcity btn-wildcity-home" >Start</a>
       <a href="#bazinga" class="ca3-scroll-down-link ca3-scroll-down-arrow"></a>
-
     </div>
   </div>
 </div>

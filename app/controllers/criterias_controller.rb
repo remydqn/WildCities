@@ -1,4 +1,6 @@
 class CriteriasController < ApplicationController
+  before_action :authenticate_user!
+
   def edit
     @criteria = current_user.criteria
   end
@@ -10,7 +12,7 @@ class CriteriasController < ApplicationController
     if @criteria.update(criteria_params)
       redirect_to new_choice_path
     else
-      render 'new'
+      render 'edit'
     end
   end
 
