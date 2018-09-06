@@ -60,7 +60,7 @@ dance_hot_stuff = Event.create(
 
 
 secret_poker = Event.create(
-  name: "Secret Poker night on a rooftop !",
+  name: "Secret Poker night !",
   normal_description: "Come and play poker with people during a night on a rooftop renting by players ! Open-bar and music all night.",
   address: "27 rue du Commandant Lamperière, 69007 Lyon",
   event_type: "hangout",
@@ -114,7 +114,7 @@ favela_chic = Event.create(
 
 
 garage_dance = Event.create(
-  name: "Lets dance in a garage !",
+  name: "Let's dance in a garage !",
   normal_description: "This is not only a garage.. after 8 PM, when the doors are closed, the party begin! Music, cocktails.. in the huge and secret room at the bottom of the garage.",
   address: "12-14 rue Louis blanc, 69006 Lyon",
   event_type: "dance",
@@ -246,7 +246,7 @@ le_syndicat = Event.create(
   event_type: "hangout",
   wild: 4,
   explained_description: "Don't be afraid to come inside.. even if the outside is weird.",
-  tips: "Take your CGT card. LOL ...",
+  tips: "Do not come with prejudices.",
   pending: true,
   city: "Lyon",
   secret_event: false,
@@ -258,7 +258,7 @@ le_syndicat = Event.create(
 )
 
 behind_the_hotel = Event.create(
-  name: "Behind the Hotel, dance and speak spanish! ",
+  name: "Behind the Hotel, speak spanish! ",
   normal_description: "Underground bar where you will rediscover the Argentine culture. La Mezcaleria is a very secret place, hidden behind the kitchens of the hotel.",
   address: "4 rue André Bollier, 69008 Lyon",
   event_type: "hangout",
