@@ -1,16 +1,15 @@
 <div class="navbar-wagon">
+  <div class="back-link">
+    <i onclick="history.back();" class="fas fa-arrow-circle-left"></i>
+  </div>
+
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
     <%= image_tag "logo.png", width: 50 %>
   </a>
 
   <!-- Right Navigation -->
-
   <% if user_signed_in? %>
-
-       <!--  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %> </li>
- -->
-
     <div class="navbar-wagon-item">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
@@ -26,7 +25,6 @@
   <% else %>
   <div class="btn-sign">
       <%= link_to "Sign In", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Sign Up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
   <% end %>
 </div>

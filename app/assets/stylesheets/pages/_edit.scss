@@ -1,45 +1,101 @@
+.criterias-edit,
+.criterias-update {
+  .form-check {
+    display: flex;
+    justify-content: space-around;
+
+    div {
+      width: 40%;
+    }
+  }
+
+  .form-elements {
+    margin: 30px 0 0;
+  }
+
+  label {
+    font-family: "News Cycle", sans-serif;
+    width: 100%;
+    padding: 15px 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .edit_criteria input[type="radio"]:checked + label {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+
+  .edit_criteria input[type="radio"] {
+    display: none;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .form-check {
+    padding-left: 0px;
+  }
+
+  .criteria_wild {
+    display: flex;
+    justify-content: space-around;
+
+    input[type="radio"]:checked + label {
+      background: transparent;
+    }
+
+    label {
+      img {
+        height: 60px;
+      }
+
+      p {
+        font-size: 0.85em;
+      }
+    }
+  }
+
+  .criteria_wild input[type="radio"] + label {
+    border: none;
+  }
+
+  .criteria_wild input[type="radio"]:checked + label {
+    background-color: transparent;
+    color: white;
+  }
+
+  input:checked + label img {
+    transform: scale(1.3);
+    transition: transform ease 0.3s;
+  }
+}
+
 .container-edit {
-  height: 100vh;
-  border-top: 0px solid rgba(0, 0, 0, 0);
   background: linear-gradient(138deg, #5b05ae, #6be9ea);
   background-size: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding-bottom: 40px;
   text-align: center;
-  z-index: -1;
-  padding-top: 50px;
 }
 
 .p-edit {
   color: white;
   font-size: 24px;
-  // margin-top: 80px;
-  letter-spacing: 0.094em;
-  font-family: 'News Cycle', sans-serif;
+  font-family: "News Cycle", sans-serif;
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
-
 }
 
-.wild {
-  margin-bottom: 0px;
-}
-
-.form-group {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.form-criteria{
+.form-criteria {
   margin-top: 0px;
-  // .form-check-input {
-  // visibility: hidden;
-  // }
-  // .label{
-  //   cursor: pointer;
-  // }
 }
 
 .col-form-label {
@@ -47,14 +103,13 @@
 }
 
 form.edit_criteria {
-    width: 95vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 0px;
-
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0px;
 }
 
 .criterias-cb label {
@@ -67,96 +122,30 @@ form.edit_criteria {
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   letter-spacing: 0.094em;
   text-transform: uppercase;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 
-background-image: -webkit-linear-gradient(bottom left, #f2f6f8, #eff1f3, #ebedef, #e8e8ea, #e4e4e5);
-background-image: -o-linear-gradient(bottom left, #f2f6f8, #eff1f3, #ebedef, #e8e8ea, #e4e4e5);
-background-image: linear-gradient(to top right, #f2f6f8, #eff1f3, #ebedef, #e8e8ea, #e4e4e5);
+  background-image: -webkit-linear-gradient(
+    bottom left,
+    #f2f6f8,
+    #eff1f3,
+    #ebedef,
+    #e8e8ea,
+    #e4e4e5
+  );
+  background-image: -o-linear-gradient(
+    bottom left,
+    #f2f6f8,
+    #eff1f3,
+    #ebedef,
+    #e8e8ea,
+    #e4e4e5
+  );
+  background-image: linear-gradient(
+    to top right,
+    #f2f6f8,
+    #eff1f3,
+    #ebedef,
+    #e8e8ea,
+    #e4e4e5
+  );
 }
-
-input[type=checkbox] {
-  display: none;
-
-}
-
-
-// RADIO BUTTON DESIGN
-
-.edit_criteria input[type='radio'] + label {
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
-    border: 2px solid white;
-}
-
-.edit_criteria input[type='radio']:checked + label {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
-}
-
-.edit_criteria input[type='radio'] {
-    display: none;
-}
-
-label {
-  cursor: pointer;
-  box-shadow: 0 0 10px #eee;
-  // background-image: -webkit-linear-gradient(left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
-  // background-image: -o-linear-gradient(left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
-  // background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
-  margin-top: 40px;
-  letter-spacing: 0.094em;
-  font-family: 'News Cycle', sans-serif;
-  width: 100%;
-  line-height: 60px;
-  border-radius: 5px;
-  color: black;
-  text-transform: uppercase;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.form-check {
-  padding-left: 0px;
-}
-
-// WILD BUTTON
-
-element.style {
-  display: flex;
-}
-
-.criteria_wild label img {
-  height: 80px;
-}
-
-.criteria_wild {
-  display: flex;
-  justify-content: space-between;
-  text: red;
-}
-
-.criteria_wild label{
-  box-shadow: none;
-}
-
-.criteria_wild input[type='radio'] + label {
-  border: none;
-}
-
-.criteria_wild input[type='radio']:checked + label {
-  background-color: transparent;
-  color: white;
- }
-
-
-input:checked + label img {
-    transform: scale(1.3);
-    transition: transform ease 0.3s;
-}
-
-// .criteria_wild input[type='radio']:checked + p {
-//   color: red;
-//   }
-// visibility: hidden;
