@@ -10,7 +10,7 @@ class VotesController < ApplicationController
    @vote.event = @event
    @vote.user = current_user
    if @vote.save
-    redirect_to edit_criterias_path(current_user.criteria)
+    redirect_to root_path
    else
     render 'new'
    end

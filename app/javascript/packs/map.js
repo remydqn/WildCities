@@ -5,7 +5,6 @@ const mapElement = document.getElementById("map");
 
 if (mapElement) {
   const markers = JSON.parse(mapElement.dataset.markers);
-
   var map = new mapboxgl.Map({
     container: "map",
     center: [4.83488, 45.746106],
@@ -17,8 +16,9 @@ if (mapElement) {
     const features = markers.map(marker => {
       return {
         type: "Feature",
+        event_type: marker.event_type,
         properties: {
-          icon: marker.icon
+          iconSize: [30, 30],
         },
         geometry: {
           type: "Point",
@@ -26,6 +26,26 @@ if (mapElement) {
         }
       };
     });
+
+    features.forEach(function(marker) {
+        // create a DOM element for the marker
+        const el = document.createElement('div');
+        el.className = 'marker';
+        if (marker.event_type == 'dance') {
+          el.style.backgroundImage = 'url(/music.png)';
+        } else {
+          el.style.backgroundImage = 'url(/drink.png)';
+        }
+
+        el.style.width = marker.properties.iconSize[0] + 'px';
+        el.style.height = marker.properties.iconSize[1] + 'px';
+
+        // add marker to map
+        new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(map);
+    });
+
 
     map.addLayer({
       id: "places",
@@ -64,40 +84,47 @@ if (mapElement) {
 
     navigator.geolocation.getCurrentPosition(
       position => {
-        map.addLayer({
-          id: "currentPosition",
-          type: "symbol",
-          source: {
-            type: "geojson",
-            data: {
-              type: "FeatureCollection",
-              features: [
-                {
-                  type: "Feature",
-                  properties: {
-                    iconSize: [90, 90],
-                    icon: "marker"
-                  },
-                  geometry: {
-                    type: "Point",
-                    coordinates: [
-                      position.coords.longitude,
-                      position.coords.latitude
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          layout: {
-            "icon-image": "{icon}-15",
-            "icon-allow-overlap": true
-          }
-        });
+        marker = new mapboxgl.Marker()
+          .setLngLat([position.coords.longitude, position.coords.latitude])
+          .addTo(map);
       },
-      error => {},
-      { timeout: 5000 }
+      error => {
+        marker = new mapboxgl.Marker()
+          .setLngLat([4.83488, 45.746106])
+          .addTo(map);
+      },
+      { timeout: 3000 }
     );
+  });
+}
+
+function addPosition(pos) {
+  map.addLayer({
+    id: "currentPosition",
+    type: "symbol",
+    source: {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: {
+              iconSize: [200, 200],
+              icon: "marker"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: pos
+            }
+          }
+        ]
+      }
+    },
+    layout: {
+      "icon-image": "{icon}-15",
+      "icon-allow-overlap": true
+    }
   });
 }
 
