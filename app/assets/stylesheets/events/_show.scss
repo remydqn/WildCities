@@ -2,6 +2,45 @@
 
 // #16a085: #16a085;
 // #1abc9c: #1abc9c;
+
+.event {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #4b4b4b;
+
+  &:active {
+    background: #343738;
+  }
+
+  .event-image {
+    flex: 0 0 30%;
+    padding: 5px;
+  }
+
+  .event-informations {
+    flex: 1 1 auto;
+    padding: 10px 15px;
+
+    h3 {
+      color: #cdcbcb;
+      margin-top: 0;
+    }
+
+    .event-tips {
+      font-size: 0.9em;
+    }
+  }
+
+  .event-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
 .tns-outer {
   margin-top: 70px;
 }
@@ -47,7 +86,7 @@
 }
 
 .star-rating {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   margin: 50px auto;
 
   > fieldset {
@@ -58,13 +97,13 @@
       > input {
         position: absolute;
         top: -9999px;
-        clip: rect(0,0,0,0);
+        clip: rect(0, 0, 0, 0);
       }
 
       > label {
         float: right;
         width: 1.2em;
-        padding: 0 .05em;
+        padding: 0 0.05em;
         overflow: hidden;
         white-space: nowrap;
         cursor: pointer;
@@ -81,8 +120,8 @@
           color: #1abc9c;
           text-shadow: 0 0 3px #1abc9c;
           &:before {
-            content: '\f005  ';
-            font-family: 'Font Awesome\ 5 Free';
+            content: "\f005  ";
+            font-family: "Font Awesome\ 5 Free";
           }
         }
       }
@@ -91,8 +130,8 @@
     > input:checked {
       & ~ label {
         &:before {
-          content: '\f005  ';
-          font-family: 'Font Awesome\ 5 Free';
+          content: "\f005  ";
+          font-family: "Font Awesome\ 5 Free";
         }
       }
     }
@@ -107,7 +146,6 @@
 body {
   background: #262829;
   color: #95a5a6;
-
 
   p {
     font-size: 1.6em;

@@ -1,17 +1,16 @@
 <div id='map' style='width: 100%; height: 60vh; z-index: 0;' data-markers="<%= @events.to_json %>">
 
 </div>
-<div class="container event-contain">
-  <% @events.each do |event| %>
-  <div class="row row-event event-contain">
-
-    <div class="col-xs-6 event-contain">
-      <img class="img-event" src=<%= "#{cl_image_path(event.photos.first)}" %> alt="party">
+<% @events.each do |event| %>
+  <div class="event">
+    <div class="event-image">
+      <img class="img-event" src="<%= cl_image_path(event.photos.first) %>" alt="party">
     </div>
-    <div class="col-xs-6 help-align-center">
+    <div class="event-informations">
       <h3 class="name-event"><%= event.name %></h3>
+      <div class="event-tips"><%= event.tips %></div>
     </div>
     <%= link_to '', event, class: "event-link" %>
   </div>
-  <% end %>
-</div>
+<% end %>
+
