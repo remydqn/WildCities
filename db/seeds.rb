@@ -275,6 +275,14 @@ behind_the_hotel = Event.create(
 )
 
 
+puts "creating votes..."
+
+Event.all.each do |event|
+  [benjamin.id, megan.id, remy.id, thomas.id].sample(2).each do |user_id|
+    Vote.create!(note:  rand(1..5), user_id: user_id, event: event)
+  end
+end
+
 #------------
 
 puts "
