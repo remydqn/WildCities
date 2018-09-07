@@ -1,0 +1,16 @@
+{
+  "short_name": "Wild Cities",
+  "name": "Wild Cities",
+  "icons": [
+    {
+      "src": "/logo-apple-touch.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#262829",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#262829"
+}

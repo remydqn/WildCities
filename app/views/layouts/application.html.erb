@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="apple-touch-icon" sizes="128x128" href="<%= image_path('logo-apple-touch.png') %>">
+    <link rel="manifest" href="/manifest.json">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
@@ -48,6 +49,5 @@
 
     <%= javascript_pack_tag "application" %>
     <%= javascript_include_tag 'application' %>
-    <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
   </body>
 </html>
