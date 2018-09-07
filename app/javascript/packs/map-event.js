@@ -1,56 +1,46 @@
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWVnYW53aWxkIiwiYSI6ImNqbG5raHB4YTBsamozbHMzNDBxeWJ3YXMifQ.WVAvyhtKa3gWkQPo5gH31w";
 
-const mapElement = document.getElementById("map");
+const mapElement = document.querySelector(".event-map");
 
 if (mapElement) {
-  const markers = JSON.parse(mapElement.dataset.markers);
+  const lat = parseFloat(mapElement.dataset.lat);
+  const lng = parseFloat(mapElement.dataset.lng);
+  const icon = mapElement.dataset.icon;
 
   var map = new mapboxgl.Map({
-    container: "map",
-    center: [4.83488, 45.746106],
+    container: mapElement,
+    center: [lng, lat],
     style: "mapbox://styles/mapbox/streets-v9",
-    zoom: 9
+    zoom: 14
   });
 
   map.on("load", function() {
-    const features = markers.map(marker => {
-      return {
-        type: "Feature",
-        properties: {
-          icon: marker.icon
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [marker.longitude, marker.latitude]
-        }
-      };
-    });
-
     map.addLayer({
-      id: "places",
+      id: "event",
       type: "symbol",
       source: {
         type: "geojson",
         data: {
           type: "FeatureCollection",
-          features: features
+          features: [
+            {
+              type: "Feature",
+              properties: {
+                icon: icon
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [lng, lat]
+              }
+            }
+          ]
         }
       },
       layout: {
         "icon-image": "{icon}-15",
         "icon-allow-overlap": true
       }
-    });
-
-    const bounds = new mapboxgl.LngLatBounds();
-
-    markers.forEach(function(marker) {
-      bounds.extend([marker.longitude, marker.latitude]);
-    });
-
-    map.fitBounds(bounds, {
-      padding: { top: 30, bottom: 30, left: 30, right: 30 }
     });
 
     map.addControl(

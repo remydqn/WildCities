@@ -10,7 +10,7 @@
   }
 
   .form-elements {
-    margin: 30px 0 0;
+    margin: 0 0 30px;
   }
 
   label {
@@ -42,15 +42,11 @@
 
   .form-check {
     padding-left: 0px;
-    padding-top: 40px;
-
   }
 
   .criteria_wild {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 30px;
-
 
     input[type="radio"]:checked + label {
       background: transparent;
@@ -110,6 +106,7 @@
 form.edit_criteria {
   width: 95vw;
   display: flex;
+  padding-top: 10px;
   justify-content: center;
   flex-direction: column;
   text-align: center;

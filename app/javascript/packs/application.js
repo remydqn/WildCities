@@ -5,6 +5,7 @@ import "./slider";
 import "./map";
 import "./carousel";
 import "./animations";
+import "./map-event";
 
 // document.addEventListener("DOMContentLoaded", function() {
 //   setTimeout(loaderRemove, 2000);

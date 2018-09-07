@@ -7,35 +7,35 @@
   <img class="img-height-carousel" src="<%= @event.photos.first %>" alt="party">
   <img class="img-height-carousel" src="<%= @event.photos.last %>" alt="party">
 </div>
-<!--
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
 
 <!-- ============== END CAROUSEL ============== -->
 <div class="container">
-
-  <div class="row help-align-center row-show-name">
-    <div class="col-xs-8 help-align-center">
-      <h2><%= @event.name %><h2>
+  <h2><%= @event.name %></h2>
+  <% if @event.votes.present? %>
+    <div class="average-note">
+      <% 5.times do |i| %>
+        <i class="far fa-star <%= @event.average_note >= i + 1 ? 'full' : '' %>"></i>
+      <% end %>
     </div>
-    <div class="col-xs-4 help-align-center">
-      <a href="<%= new_event_vote_path(@event) %>" class="btn-wildcity btn-wildcity-secondary">GO</a>
-    </div>
+  <% end %>
+  <div class="show-xpn-desc">
+    <%= @event.explained_description %>
   </div>
-  <div class="row row-show-desc">
-    <p class="show-xpn-desc">
-      <%= @event.explained_description %>
-    </p>
-    <p class="show-nrm-desc">
-      <%= @event.normal_description %>
-    </p>
+
+  <div class="show-xpn-desc">
+    <%= link_to "https://www.google.fr/maps/place/#{@event.address}", target: '_blank', class: 'address-link' do %>
+      <i class="fas fa-map-marker-alt"></i> <%= @event.address %>
+    <% end %>
+  </div>
+
+  <div class="show-nrm-desc">
+    <%= @event.normal_description %>
+  </div>
+
+  <div class='event-map' data-lat="<%= @event.latitude %>" data-lng="<%= @event.longitude %>" data-icon="<%= @event.icon %>"></div>
+
+  <div>
+    <a href="<%= new_event_vote_path(@event) %>" class="btn-wildcity btn-wildcity-secondary">Add Review</a>
   </div>
 </div>
 
