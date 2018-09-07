@@ -1,6 +1,6 @@
 .votes-new {
   .main-vote {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 70px);
     width: 90vw;
     text-align: center;
     margin: 0 auto;
@@ -31,6 +31,11 @@
 
   .star-rating {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 85px;
+  }
+
+  .btn-wildcity-secondary,
+  .btn-wildcity-secondary:focus {
+    margin-top: 150px;
   }
 }
