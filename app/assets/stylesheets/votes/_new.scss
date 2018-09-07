@@ -1,0 +1,41 @@
+.votes-new {
+  .main-vote {
+    height: calc(100vh - 70px);
+    width: 90vw;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+
+  .img-desfamilles {
+    margin-right: 7px;
+    margin-left: 7px;
+    width: 60px;
+  }
+
+  input[type="radio"] {
+      display: none;
+  }
+
+  .wildness-rating {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wildness-rating input:checked + label {
+      transform: scale(1.3);
+      transition: transform ease 0.3s;
+  }
+
+  .star-rating {
+    margin-top: 20px;
+    margin-bottom: 85px;
+  }
+
+  .btn-wildcity-secondary,
+  .btn-wildcity-secondary:focus {
+    margin-top: 150px;
+  }
+}

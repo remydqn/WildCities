@@ -1,10 +1,9 @@
-<div  tabindex="1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div  role="document">
-    <div class="modal-content">
+<div class="main-vote">
 
       <form method="post" action=<%= "#{event_votes_path}" %>>
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
+          <p>How was the place?</p>
         <div class="star-rating">
           <fieldset>
             <input type="radio" id="star5" name="vote[note]" value="5" />
@@ -20,24 +19,22 @@
           </fieldset>
         </div>
 
-        <div class="star-rating">
+         <p>How wild was it?</p>
+        <div class="wildness-rating">
           <fieldset>
-            <input type="radio" id="wild5" name="vote[wildness]" value="5" />
-            <label for="wild5" title="Outstanding"><i class="far fa-star"></i></label>
-            <input type="radio" id="wild4" name="vote[wildness]" value="4" />
-            <label for="wild4" title="Very Good"><i class="far fa-star"></i></label>
-            <input type="radio" id="wild3" name="vote[wildness]" value="3" />
-            <label for="wild3" title="Good"><i class="far fa-star"></i></label>
-            <input type="radio" id="wild2" name="vote[wildness]" value="2" />
-            <label for="wild2" title="Poor"><i class="far fa-star"></i></label>
             <input type="radio" id="wild1" name="vote[wildness]" value="1" />
-            <label for="wild1" title="Very Poor"><i class="far fa-star"></i></label>
+            <label for="wild1" title="Very Poor" class="img-desfamilles"><%= image_tag "wild1.png", alt: "wild1", width: "100%" %></label>
+            <input type="radio" id="wild2" name="vote[wildness]" value="2" />
+            <label for="wild2" title="Poor" class="img-desfamilles"><%= image_tag "wild2.png", alt: "wild2", width: "100%" %></label>
+            <input type="radio" id="wild3" name="vote[wildness]" value="3" />
+            <label for="wild3" title="Good" class="img-desfamilles"><%= image_tag "wild3.png", alt: "wild3", width: "100%" %></label>
+            <input type="radio" id="wild4" name="vote[wildness]" value="4" />
+            <label for="wild4" title="Very Good" class="img-desfamilles"><%= image_tag "wild4.png", alt: "wild4", width: "100%" %></label>
           </fieldset>
         </div>
 
-        <input type="submit" value="vote" class="btn-wildcity">
+        <input type="submit" value="vote" class="btn-wildcity btn-wildcity-secondary">
       </form>
 
-    </div>
-  </div>
 </div>
+
