@@ -7,4 +7,9 @@ class Event < ApplicationRecord
   mount_uploader :picture, PhotoUploader
   has_many :votes
 
+  def average_note
+    if votes.present?
+      (votes.sum(:note) / votes.count).round
+    end
+  end
 end
